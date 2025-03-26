@@ -64,15 +64,15 @@ const Index = () => {
         <HeroSection onScrollDown={scrollToSections} />
         
         <div ref={sectionsRef}>
-          <AboutSection />
-          <EducationSection />
-          <CompetenciesSection />
           <ServicesSection />
-          <ProjectsSection />
+          <AboutSection />
+          <CompetenciesSection />
           <ClientsSection />
+          <ProjectsSection />
           <TechnologiesSection />
-          <BlogSection />
+          <EducationSection />
           <TestimonialsSection />
+          <BlogSection />
           <ContactSection />
         </div>
       </main>
