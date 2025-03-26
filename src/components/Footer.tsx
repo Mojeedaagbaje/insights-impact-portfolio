@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div className="space-y-4">
-            <h3 className="text-xl font-bold">Analyst Portfolio</h3>
+            <h3 className="text-xl font-bold">Mojeed Agbaje</h3>
             <p className="text-muted-foreground">
               Transforming data into actionable insights and strategic recommendations.
             </p>
@@ -45,10 +45,14 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="font-semibold">Contact</h4>
             <address className="not-italic text-muted-foreground">
-              <p>San Francisco, CA</p>
-              <p>United States</p>
-              <a href="mailto:hello@analystportfolio.com" className="block mt-2 hover:text-primary transition-colors">
-                hello@analystportfolio.com
+              <p>Canada</p>
+              <p className="mt-1">
+                <a href="tel:+18253438445" className="hover:text-primary transition-colors">
+                  +1 (825) 343-8445
+                </a>
+              </p>
+              <a href="mailto:hello@mojeedagbaje.com" className="block mt-2 hover:text-primary transition-colors">
+                hello@mojeedagbaje.com
               </a>
             </address>
           </div>
@@ -57,7 +61,7 @@ const Footer = () => {
         <Separator className="my-8 bg-gray-200" />
         
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
-          <p>&copy; {currentYear} Analyst Portfolio. All rights reserved.</p>
+          <p>&copy; {currentYear} Mojeed Agbaje. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>

@@ -3,6 +3,14 @@ import React from "react";
 import { Card } from "@/components/ui/card";
 import { GraduationCap, Award, Clock, BookOpen, Users } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { 
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious
+} from "@/components/ui/carousel";
 
 const EducationSection = () => {
   const education = [
@@ -28,8 +36,9 @@ const EducationSection = () => {
 
   const certificationCategories = [
     {
+      id: "business-analysis",
       title: "Business Analysis & Agile",
-      icon: <BookOpen className="h-5 w-5 text-blue-600" />,
+      icon: <BookOpen className="h-5 w-5" />,
       certifications: [
         { name: "Certified Business Analysis Professional (CBAP)", issuer: "IIBA", date: "2018" },
         { name: "Project Management Professional (PMP)", issuer: "PMI", date: "2017" },
@@ -39,8 +48,9 @@ const EducationSection = () => {
       ]
     },
     {
+      id: "product-ai",
       title: "Product & AI Certifications",
-      icon: <BookOpen className="h-5 w-5 text-blue-600" />,
+      icon: <BookOpen className="h-5 w-5" />,
       certifications: [
         { name: "AI-First Product Leader", issuer: "PMI", date: "2023" },
         { name: "Implementing Responsible AI", issuer: "LinkedIn", date: "2022" },
@@ -48,8 +58,9 @@ const EducationSection = () => {
       ]
     },
     {
+      id: "cloud-finops",
       title: "Cloud & FinOps",
-      icon: <BookOpen className="h-5 w-5 text-blue-600" />,
+      icon: <BookOpen className="h-5 w-5" />,
       certifications: [
         { name: "AWS Technical Essentials", issuer: "AWS", date: "2021" },
         { name: "Microsoft Certified: Azure Fundamentals", issuer: "Microsoft", date: "2020" },
@@ -57,8 +68,9 @@ const EducationSection = () => {
       ]
     },
     {
+      id: "it-service",
       title: "IT Service & Automation",
-      icon: <BookOpen className="h-5 w-5 text-blue-600" />,
+      icon: <BookOpen className="h-5 w-5" />,
       certifications: [
         { name: "ITIL V4 Foundation Certification", issuer: "Axelos", date: "2019" },
         { name: "Lean Six Sigma Yellow Belt", issuer: "6sigmastudy", date: "2018" },
@@ -109,34 +121,46 @@ const EducationSection = () => {
               <h3 className="text-2xl font-semibold">Professional Certifications</h3>
             </div>
 
-            <div className="space-y-8">
-              {certificationCategories.map((category, catIndex) => (
-                <div key={catIndex} className="space-y-4">
-                  <div className="flex items-center gap-2">
-                    {category.icon}
-                    <h4 className="text-lg font-medium">{category.title}</h4>
-                  </div>
-                  
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    {category.certifications.map((cert, index) => (
-                      <Card key={index} className="p-4 glassmorphism card-hover">
-                        <div className="space-y-2">
-                          <div className="flex items-center gap-2">
-                            <div className="h-2 w-2 rounded-full bg-blue-600"></div>
-                            <h5 className="font-semibold text-primary line-clamp-2">{cert.name}</h5>
-                          </div>
-                          <p className="text-sm text-muted-foreground">{cert.issuer}</p>
-                          <div className="flex items-center gap-1 text-xs text-blue-600">
-                            <Clock className="h-3 w-3" />
-                            <span>{cert.date}</span>
+            <Tabs defaultValue="business-analysis" className="w-full">
+              <TabsList className="grid grid-cols-2 md:grid-cols-4 mb-8 bg-transparent">
+                {certificationCategories.map((category) => (
+                  <TabsTrigger 
+                    key={category.id} 
+                    value={category.id}
+                    className="data-[state=active]:shadow-soft data-[state=active]:bg-white"
+                  >
+                    <div className="flex items-center gap-2">
+                      {category.icon}
+                      <span className="hidden md:inline">{category.title}</span>
+                    </div>
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+              
+              {certificationCategories.map((category) => (
+                <TabsContent key={category.id} value={category.id} className="mt-0">
+                  <Card className="glassmorphism p-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                      {category.certifications.map((cert, index) => (
+                        <div 
+                          key={index} 
+                          className="flex flex-col p-4 bg-white/50 rounded-lg shadow-sm card-hover"
+                        >
+                          <h5 className="font-semibold text-primary mb-2">{cert.name}</h5>
+                          <div className="flex justify-between items-center mt-auto">
+                            <span className="text-sm text-muted-foreground">{cert.issuer}</span>
+                            <div className="flex items-center gap-1 text-xs text-blue-600">
+                              <Clock className="h-3 w-3" />
+                              <span>{cert.date}</span>
+                            </div>
                           </div>
                         </div>
-                      </Card>
-                    ))}
-                  </div>
-                </div>
+                      ))}
+                    </div>
+                  </Card>
+                </TabsContent>
               ))}
-            </div>
+            </Tabs>
 
             <div className="mt-8 pt-8 border-t border-gray-200">
               <div className="flex items-center gap-3 mb-4">
@@ -144,12 +168,28 @@ const EducationSection = () => {
                 <h4 className="text-lg font-medium">Professional Memberships</h4>
               </div>
               
-              <div className="flex flex-wrap gap-2">
-                {memberships.map((membership, index) => (
-                  <Badge key={index} className="bg-blue-50 text-blue-600 hover:bg-blue-100">
-                    {membership}
-                  </Badge>
-                ))}
+              <div className="relative overflow-hidden py-4">
+                <Carousel 
+                  opts={{
+                    align: "start",
+                    loop: true,
+                  }}
+                  className="w-full"
+                >
+                  <CarouselContent>
+                    {memberships.map((membership, index) => (
+                      <CarouselItem key={index} className="basis-1/3 md:basis-1/5 lg:basis-1/7">
+                        <Badge className="bg-blue-50 text-blue-600 hover:bg-blue-100 py-2 px-4 text-center w-full">
+                          {membership}
+                        </Badge>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <div className="hidden md:block">
+                    <CarouselPrevious />
+                    <CarouselNext />
+                  </div>
+                </Carousel>
               </div>
             </div>
           </div>

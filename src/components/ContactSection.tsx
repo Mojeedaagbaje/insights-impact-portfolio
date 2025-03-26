@@ -17,13 +17,13 @@ const ContactSection = () => {
     {
       icon: <Phone className="h-6 w-6 text-blue-600" />,
       title: "Phone",
-      details: "+1 (555) 123-4567",
-      link: "tel:+15551234567"
+      details: "+1 (825) 343-8445",
+      link: "tel:+18253438445"
     },
     {
       icon: <MapPin className="h-6 w-6 text-blue-600" />,
       title: "Location",
-      details: "Calgary, Alberta, Canada",
+      details: "Canada",
       link: "#"
     }
   ];
