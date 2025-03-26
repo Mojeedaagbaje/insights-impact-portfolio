@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Card } from "@/components/ui/card";
+import { MapPin, Mail, Phone } from "lucide-react";
 
 const ClientsSection = () => {
   const clients = [
@@ -46,6 +47,12 @@ const ClientsSection = () => {
     }
   ];
 
+  const contactInfo = [
+    { icon: <MapPin className="h-5 w-5 text-blue-600" />, label: "Location", value: "Canada" },
+    { icon: <Phone className="h-5 w-5 text-blue-600" />, label: "Phone", value: "(825) 343-8445" },
+    { icon: <Mail className="h-5 w-5 text-blue-600" />, label: "Email", value: "hello@mojeedagbaje.com" }
+  ];
+
   return (
     <section id="clients" className="section-animate">
       <div className="section-container">
@@ -56,7 +63,7 @@ const ClientsSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5 mb-16">
           {clients.map((client, index) => (
             <Card key={index} className="p-6 flex flex-col items-center justify-center glassmorphism card-hover">
               <img 
@@ -68,6 +75,28 @@ const ClientsSection = () => {
               <p className="text-xs text-muted-foreground">{client.industry}</p>
             </Card>
           ))}
+        </div>
+        
+        {/* Contact Information Footer Banner */}
+        <div className="mt-16 p-8 glassmorphism rounded-2xl">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+            <div>
+              <h3 className="text-2xl font-bold mb-2">Mojeed Agbaje</h3>
+              <p className="text-muted-foreground">Business Analysis & Digital Transformation Expert</p>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-6">
+              {contactInfo.map((item, index) => (
+                <div key={index} className="flex items-center gap-3">
+                  <div className="p-2 bg-blue-50 rounded-full">{item.icon}</div>
+                  <div>
+                    <p className="text-xs text-muted-foreground">{item.label}</p>
+                    <p className="font-medium">{item.value}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

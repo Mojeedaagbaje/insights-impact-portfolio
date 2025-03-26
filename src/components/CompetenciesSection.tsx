@@ -2,21 +2,20 @@
 import React from "react";
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { Star, TrendingUp, LineChart, UserCheck, Database, Briefcase, FileText, Code, Cloud, Users } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { 
+  Star, TrendingUp, LineChart, UserCheck, Database, 
+  Briefcase, FileText, Code, Cloud, Users, ArrowRight
+} from "lucide-react";
 
 const CompetenciesSection = () => {
+  // Showing fewer skills, with the top ones only
   const skills = [
     { name: "Business Analysis Documentation", value: 95 },
-    { name: "Use Case Diagram", value: 98 },
-    { name: "UML diagrams", value: 96 },
-    { name: "Wireframe", value: 97 },
-    { name: "Data Mapping, and Modelling", value: 90 },
-    { name: "Data Analysis", value: 95 },
+    { name: "Use Case & UML Diagrams", value: 98 },
+    { name: "Wireframe & Data Modeling", value: 95 },
     { name: "Business Process Modeling", value: 90 },
-    { name: "Requirements Engineering", value: 92 },
-    { name: "SQL & Database Management", value: 85 },
-    { name: "Data Visualization", value: 90 },
-    { name: "Project Management", value: 87 },
+    { name: "Data Analysis & Visualization", value: 93 },
     { name: "Stakeholder Management", value: 93 }
   ];
 
@@ -47,24 +46,9 @@ const CompetenciesSection = () => {
       description: "Transforming data into actionable insights through advanced analytics and AI solutions."
     },
     {
-      icon: <LineChart className="h-6 w-6 text-blue-600" />,
-      title: "Data Management",
-      description: "Implementing data governance, quality frameworks and management best practices."
-    },
-    {
       icon: <Code className="h-6 w-6 text-blue-600" />,
-      title: "Enterprise Architecture & IT Solutions",
+      title: "Enterprise Architecture",
       description: "Designing scalable IT infrastructures that drive business innovation and efficiency."
-    },
-    {
-      icon: <Users className="h-6 w-6 text-blue-600" />,
-      title: "Change Management & Agile Coaching",
-      description: "Guiding organizations through transformation with agile methodologies and change strategies."
-    },
-    {
-      icon: <Star className="h-6 w-6 text-blue-600" />,
-      title: "Reporting & Communication",
-      description: "Translating complex concepts into clear communications for diverse stakeholders."
     }
   ];
 
@@ -79,7 +63,15 @@ const CompetenciesSection = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
         <div className="space-y-8">
-          <h3 className="text-2xl font-semibold">Professional Skills</h3>
+          <div className="flex justify-between items-center">
+            <h3 className="text-2xl font-semibold">Professional Skills</h3>
+            <Button variant="ghost" className="group p-0 h-auto text-blue-600">
+              <span className="flex items-center gap-1">
+                See all skills
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </span>
+            </Button>
+          </div>
           <div className="space-y-5">
             {skills.map((skill, index) => (
               <div key={index} className="space-y-2">

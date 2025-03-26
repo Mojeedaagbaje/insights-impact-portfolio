@@ -4,7 +4,6 @@ import { Card } from "@/components/ui/card";
 
 const MetricsSection = () => {
   const clientStats = [
-    { value: "12+", label: "Years of Experience" },
     { value: "$155M+", label: "in Managed Projects" },
     { value: "40+", label: "Clients Served" },
     { value: "4.8", label: "CSAT Rating" },
@@ -22,7 +21,7 @@ const MetricsSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-8">
           {clientStats.map((stat, index) => (
             <Card key={index} className="p-6 text-center glassmorphism card-hover">
               <p className="text-3xl font-bold text-blue-600 mb-2">{stat.value}</p>

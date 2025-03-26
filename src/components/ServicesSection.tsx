@@ -2,7 +2,7 @@
 import React from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MessageSquare, TrendingUp, Search, FileText, Database, PieChart, ArrowRight, Code, Cloud, BarChart, Layers } from "lucide-react";
+import { MessageSquare, FileText, Database, ArrowRight, Code, Cloud, Layers } from "lucide-react";
 
 const ServicesSection = () => {
   const services = [
@@ -12,10 +12,8 @@ const ServicesSection = () => {
       description: "I bridge the gap between business needs and technology, ensuring seamless process optimization and digital innovation.",
       features: [
         "Business Requirements & Analysis",
-        "Process Optimization & Workflow Automation",
-        "Business Case Development & ROI Analysis"
-      ],
-      note: "Define clear business requirements, streamline workflows, and drive impactful transformation through data-driven insights."
+        "Process Optimization & Workflow Automation"
+      ]
     },
     {
       icon: <Cloud className="h-8 w-8 text-blue-600" />,
@@ -23,10 +21,8 @@ const ServicesSection = () => {
       description: "Optimize cloud investments through cloud strategy, cost management, governance, and performance monitoring.",
       features: [
         "Cloud Adoption & Migration Strategy",
-        "Cloud Cost Optimization (Azure, AWS, GCP)",
-        "FinOps Governance & Financial Transparency"
-      ],
-      note: "Analyze cloud adoption needs, conduct readiness assessments, enhance cloud cost visibility, implement FinOps best practices, and create training materials."
+        "Cloud Cost Optimization (Azure, AWS, GCP)"
+      ]
     },
     {
       icon: <Database className="h-8 w-8 text-blue-600" />,
@@ -34,10 +30,8 @@ const ServicesSection = () => {
       description: "Transform data into actionable insights and align AI/ML solutions with business objectives.",
       features: [
         "Data & AI Strategy & Roadmap",
-        "AI/ML Product Development & Integration",
-        "Data Governance & Analytics"
-      ],
-      note: "Define AI use cases, develop governance frameworks, and optimize data pipelines for advanced analytics."
+        "AI/ML Product Development & Integration"
+      ]
     },
     {
       icon: <Layers className="h-8 w-8 text-blue-600" />,
@@ -45,10 +39,8 @@ const ServicesSection = () => {
       description: "Deliver scalable, user-centric digital solutions through agile methodologies and strategic product planning.",
       features: [
         "Agile Coaching & SAFe Implementation",
-        "Product Roadmap & Sprint Planning",
-        "Change Management & User Adoption"
-      ],
-      note: "Define product vision, develop user stories, and accelerate delivery through stakeholder collaboration."
+        "Product Roadmap & Sprint Planning"
+      ]
     },
     {
       icon: <Code className="h-8 w-8 text-blue-600" />,
@@ -56,9 +48,8 @@ const ServicesSection = () => {
       description: "Design and implement scalable IT infrastructures to drive efficiency, innovation, and business growth.",
       features: [
         "Data Lakes & Warehousing",
-        "CRM & ERP Implementations (SAP, Salesforce, ServiceNow)"
-      ],
-      note: "Define data governance, map data flow, and support UAT testing."
+        "CRM & ERP Implementations (SAP, Salesforce)"
+      ]
     }
   ];
 
@@ -75,10 +66,10 @@ const ServicesSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <Card key={index} className="glassmorphism overflow-hidden card-hover">
-              <div className="p-8 space-y-6">
+              <div className="p-6 space-y-4">
                 <div className="p-3 bg-blue-50 inline-flex rounded-lg">{service.icon}</div>
                 <h3 className="text-xl font-semibold">{service.title}</h3>
-                <p className="text-muted-foreground">{service.description}</p>
+                <p className="text-muted-foreground text-sm">{service.description}</p>
                 
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (
@@ -88,10 +79,6 @@ const ServicesSection = () => {
                     </li>
                   ))}
                 </ul>
-                
-                <div className="mt-4 pt-4 border-t border-dashed border-gray-200">
-                  <p className="text-sm text-blue-600">📌 {service.note}</p>
-                </div>
                 
                 <Button variant="ghost" className="group p-0 h-auto text-blue-600">
                   <span className="flex items-center gap-1">
