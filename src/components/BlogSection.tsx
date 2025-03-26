@@ -8,31 +8,49 @@ import { Calendar, Clock, ArrowRight, User } from "lucide-react";
 const BlogSection = () => {
   const articles = [
     {
-      title: "The Future of Business Intelligence in 2023 and Beyond",
-      excerpt: "Exploring emerging trends in business intelligence and how they're reshaping strategic decision-making across industries.",
-      image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      title: "Mastering Cloud FinOps – Reducing Costs & Maximizing Value",
+      excerpt: "Explore strategies for optimizing cloud spending while maximizing business value through effective FinOps practices.",
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       date: "July 15, 2023",
       readTime: "8 min read",
-      category: "Business Intelligence",
-      author: "Sarah Johnson"
+      category: "Cloud Computing",
+      author: "Mojeed Agbaje"
     },
     {
-      title: "Data Visualization Techniques for Effective Storytelling",
-      excerpt: "Discover how to transform complex data into compelling narratives that drive understanding and action.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      title: "AI-Driven Customer Experience – The Future of Digital Innovation",
+      excerpt: "Discover how artificial intelligence is transforming customer experience and creating new opportunities for business growth.",
+      image: "https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       date: "June 22, 2023",
       readTime: "6 min read",
-      category: "Data Visualization",
-      author: "Sarah Johnson"
+      category: "Artificial Intelligence",
+      author: "Mojeed Agbaje"
     },
     {
-      title: "Agile Methodologies in Business Analysis: A Practical Guide",
-      excerpt: "Learn how to apply agile principles to business analysis processes for more adaptive and effective outcomes.",
-      image: "https://images.unsplash.com/photo-1542626991-cbc4e32524cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      title: "Future-Proofing IT – Scalable Cloud & Data Ecosystems",
+      excerpt: "Learn how to build resilient, scalable IT ecosystems that can adapt to changing business needs and technological advances.",
+      image: "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       date: "May 10, 2023",
       readTime: "10 min read",
-      category: "Methodology",
-      author: "Sarah Johnson"
+      category: "Digital Transformation",
+      author: "Mojeed Agbaje"
+    },
+    {
+      title: "AI-Powered Insights – Transforming Data into Actionable Business Strategies",
+      excerpt: "Explore how AI is revolutionizing data analytics and providing deeper insights for strategic decision-making.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      date: "April 18, 2023",
+      readTime: "7 min read",
+      category: "Data Analytics",
+      author: "Mojeed Agbaje"
+    },
+    {
+      title: "Maximizing Project ROI – Strategies for On-Time, Within-Budget Delivery",
+      excerpt: "Learn proven techniques for delivering projects that maximize return on investment while meeting time and budget constraints.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      date: "March 5, 2023",
+      readTime: "9 min read",
+      category: "Project Management",
+      author: "Mojeed Agbaje"
     }
   ];
 
@@ -46,8 +64,8 @@ const BlogSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {articles.map((article, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {articles.slice(0, 3).map((article, index) => (
             <Card key={index} className="overflow-hidden card-hover group">
               <div className="relative h-48 overflow-hidden">
                 <img 

@@ -4,15 +4,15 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Calendar } from "lucide-react";
 
 const ContactSection = () => {
   const contactInfo = [
     {
       icon: <Mail className="h-6 w-6 text-blue-600" />,
       title: "Email",
-      details: "hello@analystportfolio.com",
-      link: "mailto:hello@analystportfolio.com"
+      details: "hello@mojeedagbaje.com",
+      link: "mailto:hello@mojeedagbaje.com"
     },
     {
       icon: <Phone className="h-6 w-6 text-blue-600" />,
@@ -23,7 +23,7 @@ const ContactSection = () => {
     {
       icon: <MapPin className="h-6 w-6 text-blue-600" />,
       title: "Location",
-      details: "San Francisco, CA, USA",
+      details: "Calgary, Alberta, Canada",
       link: "#"
     }
   ];
@@ -33,7 +33,7 @@ const ContactSection = () => {
       <div className="mb-16">
         <h2 className="section-title">Get in Touch</h2>
         <p className="mt-6 text-lg text-muted-foreground max-w-3xl">
-          Have a project in mind or want to discuss how data analysis can benefit your organization? I'd love to hear from you.
+          Let's Build Something Great – Together 🚀
         </p>
       </div>
 
@@ -56,6 +56,19 @@ const ContactSection = () => {
                   </div>
                 </div>
               ))}
+            </div>
+            
+            <div className="mt-8 pt-8 border-t">
+              <div className="flex items-center gap-3">
+                <Button variant="outline" className="flex items-center gap-2 w-full">
+                  <Mail className="h-4 w-4" />
+                  Get in Touch
+                </Button>
+                <Button variant="outline" className="flex items-center gap-2 w-full">
+                  <Calendar className="h-4 w-4" />
+                  Schedule a Call
+                </Button>
+              </div>
             </div>
             
             <div className="mt-8 pt-8 border-t">
@@ -112,6 +125,17 @@ const ContactSection = () => {
               </div>
               
               <div className="space-y-2">
+                <label htmlFor="company" className="text-sm font-medium">
+                  Company Name
+                </label>
+                <Input 
+                  id="company" 
+                  placeholder="Your Company" 
+                  className="bg-white/70"
+                />
+              </div>
+              
+              <div className="space-y-2">
                 <label htmlFor="subject" className="text-sm font-medium">
                   Subject
                 </label>
@@ -132,6 +156,22 @@ const ContactSection = () => {
                   rows={5}
                   className="bg-white/70"
                 />
+              </div>
+              
+              <div className="space-y-2">
+                <label className="text-sm font-medium">
+                  Are you interested in receiving portfolio samples?
+                </label>
+                <div className="flex items-center gap-4">
+                  <label className="flex items-center gap-2 cursor-pointer">
+                    <input type="radio" name="portfolio" className="h-4 w-4 text-blue-600" />
+                    <span>Yes</span>
+                  </label>
+                  <label className="flex items-center gap-2 cursor-pointer">
+                    <input type="radio" name="portfolio" className="h-4 w-4 text-blue-600" />
+                    <span>No</span>
+                  </label>
+                </div>
               </div>
               
               <Button type="submit" className="button-primary flex items-center gap-2">

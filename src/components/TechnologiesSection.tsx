@@ -2,60 +2,60 @@
 import React from "react";
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Code, Database, LineChart, PieChart } from "lucide-react";
+import { Code, Database, LineChart, PieChart, Cloud, Briefcase } from "lucide-react";
 
 const TechnologiesSection = () => {
   const categories = [
     {
       id: "data-analysis",
-      name: "Data Analysis",
+      name: "Business Intelligence & Data Analytics",
       icon: <LineChart className="h-5 w-5" />,
       technologies: [
-        "Python (Pandas, NumPy, SciPy)",
-        "R Programming",
-        "IBM SPSS",
-        "Microsoft Excel (Advanced)",
-        "Google Analytics",
-        "Statistical Analysis"
-      ]
-    },
-    {
-      id: "visualization",
-      name: "Data Visualization",
-      icon: <PieChart className="h-5 w-5" />,
-      technologies: [
-        "Tableau",
         "Power BI",
-        "Qlik Sense",
-        "D3.js",
-        "Google Data Studio",
-        "Matplotlib & Seaborn"
+        "Tableau",
+        "SAS",
+        "Microsoft Fabric",
+        "Python (Pandas, NumPy)",
+        "R Programming"
       ]
     },
     {
-      id: "databases",
-      name: "Databases",
+      id: "cloud",
+      name: "Cloud Platforms",
+      icon: <Cloud className="h-5 w-5" />,
+      technologies: [
+        "Microsoft Azure",
+        "Amazon Web Services (AWS)",
+        "Google Cloud Platform",
+        "IBM Cloud",
+        "Azure DevOps",
+        "AWS CloudFormation"
+      ]
+    },
+    {
+      id: "project-management",
+      name: "Project & Product Management",
+      icon: <Briefcase className="h-5 w-5" />,
+      technologies: [
+        "Jira",
+        "Azure DevOps",
+        "Figma",
+        "Balsamiq",
+        "Microsoft Visio",
+        "Miro"
+      ]
+    },
+    {
+      id: "crm-erp",
+      name: "CRM & ERP Systems",
       icon: <Database className="h-5 w-5" />,
       technologies: [
-        "SQL (PostgreSQL, MySQL, MS SQL)",
-        "NoSQL (MongoDB)",
-        "Data Warehousing",
-        "ETL Processes",
-        "Database Design",
-        "Query Optimization"
-      ]
-    },
-    {
-      id: "development",
-      name: "Development",
-      icon: <Code className="h-5 w-5" />,
-      technologies: [
-        "HTML/CSS/JavaScript",
-        "Python Development",
-        "API Integration",
-        "Git & Version Control",
-        "Agile Methodologies",
-        "CI/CD Principles"
+        "Microsoft Dynamics 365",
+        "SAP",
+        "Salesforce",
+        "Oracle Siebel CRM",
+        "ServiceNow",
+        "Workday"
       ]
     }
   ];

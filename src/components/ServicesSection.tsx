@@ -2,33 +2,63 @@
 import React from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MessageSquare, TrendingUp, Search, FileText, PieChart, ArrowRight } from "lucide-react";
+import { MessageSquare, TrendingUp, Search, FileText, Database, PieChart, ArrowRight, Code, Cloud, BarChart, Layers } from "lucide-react";
 
 const ServicesSection = () => {
   const services = [
     {
-      icon: <Search className="h-8 w-8 text-blue-600" />,
-      title: "Business Requirements Analysis",
-      description: "Comprehensive gathering and documentation of business requirements to ensure alignment with organizational objectives.",
-      features: ["Stakeholder Interviews", "Requirements Documentation", "Gap Analysis", "Acceptance Criteria Definition"]
-    },
-    {
-      icon: <PieChart className="h-8 w-8 text-blue-600" />,
-      title: "Data Analysis & Reporting",
-      description: "In-depth analysis of business data to uncover insights and trends that inform strategic decision-making.",
-      features: ["Statistical Analysis", "Predictive Modeling", "Interactive Dashboards", "Trend Identification"]
-    },
-    {
-      icon: <TrendingUp className="h-8 w-8 text-blue-600" />,
-      title: "Process Optimization",
-      description: "Identification and implementation of improvements to business processes for enhanced efficiency and reduced costs.",
-      features: ["Process Mapping", "Bottleneck Analysis", "Automation Opportunities", "Continuous Improvement"]
-    },
-    {
       icon: <FileText className="h-8 w-8 text-blue-600" />,
-      title: "Strategic Planning",
-      description: "Development of data-backed strategies to achieve business goals and gain competitive advantage.",
-      features: ["Market Analysis", "SWOT Assessment", "Risk Management", "Implementation Roadmaps"]
+      title: "Business Analysis & Digital Transformation",
+      description: "I bridge the gap between business needs and technology, ensuring seamless process optimization and digital innovation.",
+      features: [
+        "Business Requirements & Analysis",
+        "Process Optimization & Workflow Automation",
+        "Business Case Development & ROI Analysis"
+      ],
+      note: "Define clear business requirements, streamline workflows, and drive impactful transformation through data-driven insights."
+    },
+    {
+      icon: <Cloud className="h-8 w-8 text-blue-600" />,
+      title: "Cloud & FinOps Strategy",
+      description: "Optimize cloud investments through cloud strategy, cost management, governance, and performance monitoring.",
+      features: [
+        "Cloud Adoption & Migration Strategy",
+        "Cloud Cost Optimization (Azure, AWS, GCP)",
+        "FinOps Governance & Financial Transparency"
+      ],
+      note: "Analyze cloud adoption needs, conduct readiness assessments, enhance cloud cost visibility, implement FinOps best practices, and create training materials."
+    },
+    {
+      icon: <Database className="h-8 w-8 text-blue-600" />,
+      title: "Data & AI Solutions",
+      description: "Transform data into actionable insights and align AI/ML solutions with business objectives.",
+      features: [
+        "Data & AI Strategy & Roadmap",
+        "AI/ML Product Development & Integration",
+        "Data Governance & Analytics"
+      ],
+      note: "Define AI use cases, develop governance frameworks, and optimize data pipelines for advanced analytics."
+    },
+    {
+      icon: <Layers className="h-8 w-8 text-blue-600" />,
+      title: "Product Management & Agile Consulting",
+      description: "Deliver scalable, user-centric digital solutions through agile methodologies and strategic product planning.",
+      features: [
+        "Agile Coaching & SAFe Implementation",
+        "Product Roadmap & Sprint Planning",
+        "Change Management & User Adoption"
+      ],
+      note: "Define product vision, develop user stories, and accelerate delivery through stakeholder collaboration."
+    },
+    {
+      icon: <Code className="h-8 w-8 text-blue-600" />,
+      title: "Enterprise Architecture & IT Solutions",
+      description: "Design and implement scalable IT infrastructures to drive efficiency, innovation, and business growth.",
+      features: [
+        "Data Lakes & Warehousing",
+        "CRM & ERP Implementations (SAP, Salesforce, ServiceNow)"
+      ],
+      note: "Define data governance, map data flow, and support UAT testing."
     }
   ];
 
@@ -38,11 +68,11 @@ const ServicesSection = () => {
         <div className="mb-16">
           <h2 className="section-title">How I Can Support Your Business</h2>
           <p className="mt-6 text-lg text-muted-foreground max-w-3xl">
-            I offer a comprehensive suite of business analysis services designed to help your organization make data-driven decisions, optimize processes, and achieve strategic goals.
+            I offer comprehensive services designed to transform business challenges into opportunities for growth and innovation.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <Card key={index} className="glassmorphism overflow-hidden card-hover">
               <div className="p-8 space-y-6">
@@ -58,6 +88,10 @@ const ServicesSection = () => {
                     </li>
                   ))}
                 </ul>
+                
+                <div className="mt-4 pt-4 border-t border-dashed border-gray-200">
+                  <p className="text-sm text-blue-600">📌 {service.note}</p>
+                </div>
                 
                 <Button variant="ghost" className="group p-0 h-auto text-blue-600">
                   <span className="flex items-center gap-1">

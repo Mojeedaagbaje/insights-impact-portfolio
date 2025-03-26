@@ -6,48 +6,48 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowRight, ExternalLink, Calendar } from "lucide-react";
 
 const ProjectsSection = () => {
-  const [visibleProjects, setVisibleProjects] = useState(3);
+  const [visibleProjects, setVisibleProjects] = useState(4);
   
   const projects = [
     {
-      title: "Financial Analytics Dashboard",
-      category: "Data Visualization",
-      description: "Developed a comprehensive financial analytics dashboard that transformed raw data into actionable insights, resulting in a 15% improvement in decision-making efficiency.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      date: "June 2023",
-      tags: ["Tableau", "Financial Analysis", "Dashboard Design"]
+      title: "NovaPeer X Application & Website",
+      category: "FinTech",
+      description: "Developed a cross-border payment platform, leading the end-to-end design and deployment, creating a seamless user experience for international transactions.",
+      image: "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      date: "2023",
+      tags: ["Digital Payments", "UX/UI Design", "Cross-border Platform"]
     },
     {
-      title: "Supply Chain Optimization",
-      category: "Process Improvement",
-      description: "Analyzed and optimized the client's global supply chain processes, identifying bottlenecks and implementing solutions that reduced operational costs by 12%.",
-      image: "https://images.unsplash.com/photo-1566633806327-68e152aaf26d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      date: "March 2023",
-      tags: ["Supply Chain", "Process Optimization", "Cost Reduction"]
+      title: "Frontier Vista Global Inc. Digital Presence",
+      category: "Web Development",
+      description: "Developed a world-class digital presence to align with the company's business objectives, enhancing brand visibility and customer engagement through strategic design.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      date: "2022",
+      tags: ["Digital Branding", "Web Development", "UX Design"]
     },
     {
-      title: "Customer Journey Mapping",
-      category: "Customer Experience",
-      description: "Conducted in-depth customer journey analysis for a retail client, leading to targeted improvements that increased customer satisfaction scores by 18%.",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      date: "November 2022",
-      tags: ["UX Research", "Customer Mapping", "Retail"]
+      title: "Government of Alberta - Federated Data Ecosystem",
+      category: "Data & AI",
+      description: "Led the development of a Federated Data Ecosystem & Data Marketplace, creating data management strategies and guidelines for government-wide implementation.",
+      image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      date: "2022",
+      tags: ["Government", "Data Management", "Policy Development"]
     },
     {
-      title: "Market Entry Strategy",
-      category: "Strategic Planning",
-      description: "Developed a comprehensive market entry strategy for a technology company expanding into European markets, resulting in successful market penetration.",
-      image: "https://images.unsplash.com/photo-1533750349088-cd871a92f312?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      date: "August 2022",
-      tags: ["Market Analysis", "Strategy", "International Business"]
+      title: "Government of Alberta - Predictive AI Models",
+      category: "Artificial Intelligence",
+      description: "Developed Predictive AI Models for Fraud Detection & Risk Analysis, enhancing government operational efficiency and risk management capabilities.",
+      image: "https://images.unsplash.com/photo-1591696205602-2f950c417cb9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      date: "2021",
+      tags: ["AI/ML", "Predictive Analytics", "Fraud Detection"]
     },
     {
-      title: "Enterprise Software Implementation",
-      category: "System Implementation",
-      description: "Led the requirements gathering and analysis phase for a major ERP implementation, ensuring alignment between business needs and system capabilities.",
-      image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      date: "May 2022",
-      tags: ["ERP", "Requirements Analysis", "Enterprise Systems"]
+      title: "Afroshop E-commerce Platform",
+      category: "E-commerce",
+      description: "Led the largest Afro-Caribbean grocery marketplace in Canada through a full digital transformation, enhancing user experience and operational efficiency.",
+      image: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      date: "2020",
+      tags: ["E-commerce", "Digital Transformation", "UX Research"]
     }
   ];
 
@@ -64,7 +64,7 @@ const ProjectsSection = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
         {projects.slice(0, visibleProjects).map((project, index) => (
           <Card key={index} className="overflow-hidden card-hover group">
             <div className="relative h-56 overflow-hidden">

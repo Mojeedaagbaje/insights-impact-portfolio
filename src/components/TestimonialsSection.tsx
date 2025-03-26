@@ -9,25 +9,32 @@ const TestimonialsSection = () => {
   
   const testimonials = [
     {
-      quote: "Working with this business analyst transformed our approach to data. Their insights helped us identify untapped opportunities and streamline our operations in ways we hadn't considered.",
-      author: "Jennifer Chen",
-      position: "COO, TechSolutions Inc.",
+      quote: "Mojeed's ability to turn complex requirements into streamlined solutions is unmatched.",
+      author: "Josh",
+      position: "Manager, Data Product Delivery (GoA)",
       rating: 5,
-      image: "https://randomuser.me/api/portraits/women/44.jpg"
+      image: "https://randomuser.me/api/portraits/men/44.jpg"
     },
     {
-      quote: "The depth of analysis provided was impressive. They didn't just analyze our data but took the time to understand our business objectives, resulting in recommendations that were both practical and strategic.",
-      author: "Michael Rodriguez",
-      position: "CFO, Global Retail Partners",
+      quote: "Exceptional strategic thinker with a results-driven approach.",
+      author: "Sasa",
+      position: "Platform Analyst (GoA)",
       rating: 5,
-      image: "https://randomuser.me/api/portraits/men/32.jpg"
+      image: "https://randomuser.me/api/portraits/women/32.jpg"
     },
     {
-      quote: "Their ability to translate complex data into actionable insights is remarkable. The visualizations and reports they created have become essential tools for our executive decision-making process.",
-      author: "Sarah Thompson",
-      position: "CEO, Healthcare Innovations",
+      quote: "Mojeed was instrumental in building our payments platform from the ground up.",
+      author: "Wolimat",
+      position: "Product Manager (Nova PeerX)",
       rating: 5,
       image: "https://randomuser.me/api/portraits/women/68.jpg"
+    },
+    {
+      quote: "Mojeed's leadership helped us transform our ecommerce platform and achieve significant business growth.",
+      author: "Michael",
+      position: "Product Lead (Afroshop/SkillGarage)",
+      rating: 5,
+      image: "https://randomuser.me/api/portraits/men/32.jpg"
     }
   ];
 
@@ -48,7 +55,7 @@ const TestimonialsSection = () => {
       <div className="mb-16 text-center">
         <h2 className="section-title mx-auto after:left-1/3">Testimonials</h2>
         <p className="mt-6 text-lg text-muted-foreground max-w-3xl mx-auto">
-          Discover what clients say about working with me and the impact of my analytical services on their businesses.
+          Discover what clients and colleagues say about working with me and the impact of my services on their businesses.
         </p>
       </div>
 

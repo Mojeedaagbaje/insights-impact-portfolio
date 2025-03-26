@@ -20,6 +20,7 @@ import TechnologiesSection from "@/components/TechnologiesSection";
 import BlogSection from "@/components/BlogSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactSection from "@/components/ContactSection";
+import PortfolioSection from "@/components/PortfolioSection";
 
 const Index = () => {
   const sectionsRef = useRef<HTMLDivElement>(null);
@@ -69,6 +70,8 @@ const Index = () => {
           <CompetenciesSection />
           <ClientsSection />
           <ProjectsSection />
+          <PortfolioSection />
+          <ClientsSection />
           <TechnologiesSection />
           <EducationSection />
           <TestimonialsSection />

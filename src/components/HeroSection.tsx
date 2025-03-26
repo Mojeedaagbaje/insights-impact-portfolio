@@ -20,20 +20,23 @@ const HeroSection = ({ onScrollDown }: HeroSectionProps) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-10">
         <div className="text-center space-y-10">
           <div className="space-y-6 animate-slide-up">
+            <p className="text-2xl sm:text-3xl font-medium text-blue-600">
+              Hi, I am Mojeed Agbaje
+            </p>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight text-primary">
               Transforming <span className="text-blue-600">Insights</span> into <span className="text-blue-600">Impact</span>
             </h1>
             <p className="max-w-2xl mx-auto text-lg sm:text-xl text-muted-foreground">
-              Data-driven business analysis that delivers actionable strategies, measurable results, and transformative solutions for your organization.
+              Empowering businesses with tailored strategies, innovative solutions, and sustainable growth.
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 animate-slide-up" style={{ animationDelay: "0.3s" }}>
             <Button className="button-primary text-base px-8 py-6">
-              Get Started
+              View My Services
             </Button>
             <Button variant="outline" className="text-base px-8 py-6">
-              View Projects
+              Let's Connect
             </Button>
           </div>
 

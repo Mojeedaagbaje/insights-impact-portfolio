@@ -2,14 +2,18 @@
 import React from "react";
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { Star, TrendingUp, LineChart, UserCheck, Database, Briefcase } from "lucide-react";
+import { Star, TrendingUp, LineChart, UserCheck, Database, Briefcase, FileText, Code, Cloud, Users } from "lucide-react";
 
 const CompetenciesSection = () => {
   const skills = [
+    { name: "Business Analysis Documentation", value: 95 },
+    { name: "Use Case Diagram", value: 98 },
+    { name: "UML diagrams", value: 96 },
+    { name: "Wireframe", value: 97 },
+    { name: "Data Mapping, and Modelling", value: 90 },
     { name: "Data Analysis", value: 95 },
     { name: "Business Process Modeling", value: 90 },
     { name: "Requirements Engineering", value: 92 },
-    { name: "Statistical Analysis", value: 88 },
     { name: "SQL & Database Management", value: 85 },
     { name: "Data Visualization", value: 90 },
     { name: "Project Management", value: 87 },
@@ -18,34 +22,49 @@ const CompetenciesSection = () => {
 
   const coreCompetencies = [
     {
-      icon: <LineChart className="h-6 w-6 text-blue-600" />,
-      title: "Data Analysis & Interpretation",
-      description: "Transforming complex data sets into clear, actionable insights to inform strategic decisions."
+      icon: <FileText className="h-6 w-6 text-blue-600" />,
+      title: "Business Analysis",
+      description: "Capturing requirements, analyzing processes, and aligning technology solutions with business objectives."
     },
     {
       icon: <TrendingUp className="h-6 w-6 text-blue-600" />,
-      title: "Process Optimization",
-      description: "Identifying inefficiencies and implementing solutions to streamline operations and reduce costs."
-    },
-    {
-      icon: <UserCheck className="h-6 w-6 text-blue-600" />,
-      title: "Requirements Gathering",
-      description: "Eliciting and documenting precise business requirements to ensure project alignment with objectives."
-    },
-    {
-      icon: <Database className="h-6 w-6 text-blue-600" />,
-      title: "Data Management",
-      description: "Organizing and maintaining complex data architectures to ensure data integrity and accessibility."
+      title: "Strategy Planning",
+      description: "Developing actionable roadmaps and strategic initiatives to achieve business goals."
     },
     {
       icon: <Briefcase className="h-6 w-6 text-blue-600" />,
-      title: "Strategic Planning",
-      description: "Developing long-term business strategies backed by data-driven insights and market analysis."
+      title: "Project & Program Management",
+      description: "Delivering complex initiatives on time and within budget through structured methodologies."
+    },
+    {
+      icon: <Cloud className="h-6 w-6 text-blue-600" />,
+      title: "Cloud & FinOps Strategy",
+      description: "Optimizing cloud investments through strategic planning, governance and cost management."
+    },
+    {
+      icon: <Database className="h-6 w-6 text-blue-600" />,
+      title: "AI & Data Analytics",
+      description: "Transforming data into actionable insights through advanced analytics and AI solutions."
+    },
+    {
+      icon: <LineChart className="h-6 w-6 text-blue-600" />,
+      title: "Data Management",
+      description: "Implementing data governance, quality frameworks and management best practices."
+    },
+    {
+      icon: <Code className="h-6 w-6 text-blue-600" />,
+      title: "Enterprise Architecture & IT Solutions",
+      description: "Designing scalable IT infrastructures that drive business innovation and efficiency."
+    },
+    {
+      icon: <Users className="h-6 w-6 text-blue-600" />,
+      title: "Change Management & Agile Coaching",
+      description: "Guiding organizations through transformation with agile methodologies and change strategies."
     },
     {
       icon: <Star className="h-6 w-6 text-blue-600" />,
       title: "Reporting & Communication",
-      description: "Presenting complex findings in clear, compelling formats tailored to diverse stakeholder needs."
+      description: "Translating complex concepts into clear communications for diverse stakeholders."
     }
   ];
 
