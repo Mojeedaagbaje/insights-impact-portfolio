@@ -4,12 +4,16 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { FileText, Cloud, Database, Layers } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const PortfolioSection = () => {
+  const isMobile = useIsMobile();
+  
   const categories = [
     {
       id: "business-analysis",
       name: "Business Analysis & Digital Transformation",
+      shortName: "Business Analysis",
       icon: <FileText className="h-5 w-5" />,
       color: "text-blue-600",
       bgColor: "bg-blue-50",
@@ -32,6 +36,7 @@ const PortfolioSection = () => {
     {
       id: "cloud-finops",
       name: "Cloud & FinOps Strategy",
+      shortName: "Cloud & FinOps",
       icon: <Cloud className="h-5 w-5" />,
       color: "text-green-600",
       bgColor: "bg-green-50",
@@ -50,6 +55,7 @@ const PortfolioSection = () => {
     {
       id: "data-ai",
       name: "Data & AI Solutions",
+      shortName: "Data & AI",
       icon: <Database className="h-5 w-5" />,
       color: "text-purple-600",
       bgColor: "bg-purple-50",
@@ -72,6 +78,7 @@ const PortfolioSection = () => {
     {
       id: "product-agile",
       name: "Product Management & Agile Consulting",
+      shortName: "Product & Agile",
       icon: <Layers className="h-5 w-5" />,
       color: "text-orange-600",
       bgColor: "bg-orange-50",
@@ -105,24 +112,23 @@ const PortfolioSection = () => {
         </div>
 
         <Tabs defaultValue="business-analysis" className="w-full">
-          <TabsList className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 mb-8 bg-transparent">
+          <TabsList className={`flex flex-wrap ${isMobile ? 'gap-2 bg-transparent justify-center' : 'grid grid-cols-4 mb-8 bg-transparent'}`}>
             {categories.map((category) => (
               <TabsTrigger 
                 key={category.id} 
                 value={category.id}
-                className={`data-[state=active]:shadow-soft data-[state=active]:${category.bgColor} data-[state=active]:${category.color}`}
+                className={`data-[state=active]:shadow-soft data-[state=active]:${category.bgColor} data-[state=active]:${category.color} ${isMobile ? 'flex-1 min-w-[45%] text-xs py-1' : ''}`}
               >
                 <div className="flex items-center gap-2">
                   <span className={category.color}>{category.icon}</span>
-                  <span className="hidden sm:inline">{category.name}</span>
-                  <span className="sm:hidden">{category.name.split('&')[0]}</span>
+                  <span>{isMobile ? category.shortName : category.name.split('&')[0]}</span>
                 </div>
               </TabsTrigger>
             ))}
           </TabsList>
           
           {categories.map((category) => (
-            <TabsContent key={category.id} value={category.id} className="mt-0">
+            <TabsContent key={category.id} value={category.id} className="mt-4">
               <Card className={`glassmorphism p-6 ${category.bgColor}`}>
                 <h3 className={`text-xl font-semibold mb-6 flex items-center gap-2 ${category.color}`}>
                   {category.icon}
@@ -133,7 +139,7 @@ const PortfolioSection = () => {
                     <Button
                       key={index}
                       variant="outline"
-                      className={`justify-start h-auto py-4 px-4 text-left ${category.hoverBgColor} ${category.hoverColor}`}
+                      className={`justify-start h-auto py-4 px-4 text-left transition-all duration-300 ${category.hoverBgColor} ${category.hoverColor}`}
                       onClick={() => setShowContactForm(true)}
                     >
                       <div className="flex items-start gap-3">

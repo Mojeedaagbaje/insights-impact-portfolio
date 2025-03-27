@@ -5,8 +5,11 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Send, Calendar } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const ContactSection = () => {
+  const isMobile = useIsMobile();
+  
   const contactInfo = [
     {
       icon: <Mail className="h-6 w-6 text-white" />,
@@ -60,7 +63,7 @@ const ContactSection = () => {
               </div>
               
               <div className="mt-8 pt-8 border-t border-white/20">
-                <div className="flex items-center gap-3">
+                <div className={`flex ${isMobile ? 'flex-col' : 'flex-row'} items-center gap-3`}>
                   <Button variant="outline" className="flex items-center gap-2 w-full bg-transparent border-white/30 text-white hover:bg-white/10">
                     <Mail className="h-4 w-4" />
                     Get in Touch

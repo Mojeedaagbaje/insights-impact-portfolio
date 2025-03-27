@@ -3,12 +3,16 @@ import React from "react";
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { LineChart, Database, Briefcase, Cloud } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const TechnologiesSection = () => {
+  const isMobile = useIsMobile();
+  
   const categories = [
     {
       id: "data-analysis",
       name: "Business Intelligence & Data Analytics",
+      shortName: "Data Analytics",
       icon: <LineChart className="h-5 w-5" />,
       technologies: [
         "Power BI",
@@ -26,6 +30,7 @@ const TechnologiesSection = () => {
     {
       id: "cloud",
       name: "Cloud Platforms",
+      shortName: "Cloud",
       icon: <Cloud className="h-5 w-5" />,
       technologies: [
         "Microsoft Azure",
@@ -43,6 +48,7 @@ const TechnologiesSection = () => {
     {
       id: "project-management",
       name: "Project & Product Management",
+      shortName: "Project Mgmt",
       icon: <Briefcase className="h-5 w-5" />,
       technologies: [
         "Jira",
@@ -60,6 +66,7 @@ const TechnologiesSection = () => {
     {
       id: "crm-erp",
       name: "CRM & ERP Systems",
+      shortName: "CRM & ERP",
       icon: <Database className="h-5 w-5" />,
       technologies: [
         "Microsoft Dynamics 365",
@@ -86,29 +93,32 @@ const TechnologiesSection = () => {
       </div>
 
       <Tabs defaultValue="data-analysis" className="w-full">
-        <TabsList className="grid grid-cols-2 md:grid-cols-4 mb-8 bg-transparent">
+        <TabsList className={`flex flex-wrap ${isMobile ? 'gap-2 bg-transparent justify-center' : 'grid grid-cols-4 mb-8 bg-transparent'}`}>
           {categories.map((category) => (
             <TabsTrigger 
               key={category.id} 
               value={category.id}
-              className={`data-[state=active]:shadow-soft data-[state=active]:${category.bgColor} data-[state=active]:${category.color}`}
+              className={`data-[state=active]:shadow-soft data-[state=active]:${category.bgColor} data-[state=active]:${category.color} ${isMobile ? 'flex-1 min-w-[45%] text-xs py-1' : ''}`}
             >
               <div className="flex items-center gap-2">
                 <span className={category.color}>{category.icon}</span>
-                <span>{category.name}</span>
+                <span>{isMobile ? category.shortName : category.name}</span>
               </div>
             </TabsTrigger>
           ))}
         </TabsList>
         
         {categories.map((category) => (
-          <TabsContent key={category.id} value={category.id} className="mt-0">
+          <TabsContent key={category.id} value={category.id} className="mt-4">
             <Card className={`glassmorphism p-6 ${category.bgColor}`}>
+              <h3 className={`text-xl font-semibold mb-6 ${category.color}`}>
+                {category.name}
+              </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 {category.technologies.map((tech, index) => (
                   <div 
                     key={index} 
-                    className={`flex items-center p-4 bg-white/50 rounded-lg shadow-sm card-hover ${category.hoverBgColor}`}
+                    className={`flex items-center p-4 bg-white/50 rounded-lg shadow-sm card-hover transition-all duration-300 ${category.hoverBgColor}`}
                   >
                     <div className={`h-2 w-2 rounded-full ${category.accentColor} mr-3`}></div>
                     <span className={category.color}>{tech}</span>

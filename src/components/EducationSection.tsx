@@ -11,8 +11,11 @@ import {
   CarouselNext,
   CarouselPrevious
 } from "@/components/ui/carousel";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const EducationSection = () => {
+  const isMobile = useIsMobile();
+  
   const education = [
     {
       degree: "Bachelor of Science (B.Sc.)",
@@ -109,7 +112,7 @@ const EducationSection = () => {
                 <div className="space-y-3">
                   <div className="flex justify-between items-start">
                     <h4 className="text-xl font-semibold">{item.degree}</h4>
-                    <span className="px-3 py-1 bg-indigo-100 text-indigo-600 text-xs rounded-full flex items-center gap-1">
+                    <span className="px-2 py-1 bg-indigo-100 text-indigo-600 text-xs rounded-full flex items-center gap-1">
                       <Clock className="h-3 w-3" /> {item.period}
                     </span>
                   </div>
@@ -129,7 +132,7 @@ const EducationSection = () => {
           </div>
 
           <Tabs defaultValue="business-analysis" className="w-full">
-            <TabsList className="grid grid-cols-2 md:grid-cols-4 mb-6 bg-transparent">
+            <TabsList className={`${isMobile ? 'grid-cols-2 flex-wrap' : 'grid-cols-4'} grid mb-6 bg-transparent`}>
               {certificationCategories.map((category) => (
                 <TabsTrigger 
                   key={category.id} 
@@ -138,7 +141,7 @@ const EducationSection = () => {
                 >
                   <div className="flex items-center gap-2">
                     {category.icon}
-                    <span className="hidden md:inline">{category.title}</span>
+                    <span className={isMobile ? "text-xs" : "hidden md:inline"}>{category.title}</span>
                   </div>
                 </TabsTrigger>
               ))}
@@ -147,6 +150,7 @@ const EducationSection = () => {
             {certificationCategories.map((category) => (
               <TabsContent key={category.id} value={category.id} className="mt-0">
                 <Card className="glassmorphism p-6">
+                  <h4 className="font-medium text-indigo-600 mb-4 md:hidden">{category.title}</h4>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     {category.certifications.map((cert, index) => (
                       <div 
@@ -172,30 +176,43 @@ const EducationSection = () => {
           </div>
           
           <div className="relative overflow-hidden py-4">
-            <Carousel 
-              opts={{
-                align: "start",
-                loop: true,
-              }}
-              className="w-full"
-            >
-              <CarouselContent>
+            {isMobile ? (
+              <div className="grid grid-cols-2 gap-4">
                 {memberships.map((membership, index) => (
-                  <CarouselItem key={index} className="basis-1/3 md:basis-1/5 lg:basis-1/7">
-                    <div className="flex flex-col items-center gap-2 bg-white rounded-lg p-4 text-center card-hover">
-                      <img src={membership.logo} alt={membership.name} className="w-20 h-20 object-contain mb-2" />
-                      <Badge className="bg-indigo-50 text-indigo-600 hover:bg-indigo-100 py-2 px-4 text-center">
-                        {membership.name}
-                      </Badge>
-                    </div>
-                  </CarouselItem>
+                  <div key={index} className="flex flex-col items-center gap-2 bg-white rounded-lg p-4 text-center card-hover">
+                    <img src={membership.logo} alt={membership.name} className="w-16 h-16 object-contain mb-2" />
+                    <Badge className="bg-indigo-50 text-indigo-600 hover:bg-indigo-100 py-1 px-2 text-xs text-center whitespace-nowrap">
+                      {membership.name}
+                    </Badge>
+                  </div>
                 ))}
-              </CarouselContent>
-              <div className="hidden md:block">
-                <CarouselPrevious />
-                <CarouselNext />
               </div>
-            </Carousel>
+            ) : (
+              <Carousel 
+                opts={{
+                  align: "start",
+                  loop: true,
+                }}
+                className="w-full"
+              >
+                <CarouselContent>
+                  {memberships.map((membership, index) => (
+                    <CarouselItem key={index} className="basis-1/3 md:basis-1/5 lg:basis-1/7">
+                      <div className="flex flex-col items-center gap-2 bg-white rounded-lg p-4 text-center card-hover">
+                        <img src={membership.logo} alt={membership.name} className="w-20 h-20 object-contain mb-2" />
+                        <Badge className="bg-indigo-50 text-indigo-600 hover:bg-indigo-100 py-2 px-4 text-center">
+                          {membership.name}
+                        </Badge>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <div className="hidden md:block">
+                  <CarouselPrevious />
+                  <CarouselNext />
+                </div>
+              </Carousel>
+            )}
           </div>
         </div>
       </div>
