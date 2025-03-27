@@ -11,6 +11,11 @@ const PortfolioSection = () => {
       id: "business-analysis",
       name: "Business Analysis & Digital Transformation",
       icon: <FileText className="h-5 w-5" />,
+      color: "text-blue-600",
+      bgColor: "bg-blue-50",
+      hoverColor: "hover:text-blue-700",
+      hoverBgColor: "hover:bg-blue-50",
+      accentColor: "bg-blue-600",
       items: [
         "Business Requirements Document (BRD)",
         "Process Flow Diagrams",
@@ -28,6 +33,11 @@ const PortfolioSection = () => {
       id: "cloud-finops",
       name: "Cloud & FinOps Strategy",
       icon: <Cloud className="h-5 w-5" />,
+      color: "text-green-600",
+      bgColor: "bg-green-50",
+      hoverColor: "hover:text-green-700",
+      hoverBgColor: "hover:bg-green-50",
+      accentColor: "bg-green-600",
       items: [
         "Cloud Adoption & Migration Strategy",
         "FinOps Governance Framework",
@@ -41,6 +51,11 @@ const PortfolioSection = () => {
       id: "data-ai",
       name: "Data & AI Solutions",
       icon: <Database className="h-5 w-5" />,
+      color: "text-purple-600",
+      bgColor: "bg-purple-50",
+      hoverColor: "hover:text-purple-700",
+      hoverBgColor: "hover:bg-purple-50",
+      accentColor: "bg-purple-600",
       items: [
         "AI Use Case Feasibility Report",
         "Data Strategy & AI Roadmap",
@@ -58,6 +73,11 @@ const PortfolioSection = () => {
       id: "product-agile",
       name: "Product Management & Agile Consulting",
       icon: <Layers className="h-5 w-5" />,
+      color: "text-orange-600",
+      bgColor: "bg-orange-50",
+      hoverColor: "hover:text-orange-700",
+      hoverBgColor: "hover:bg-orange-50",
+      accentColor: "bg-orange-600",
       items: [
         "Product Roadmap",
         "User Story Mapping & Acceptance Criteria",
@@ -75,7 +95,7 @@ const PortfolioSection = () => {
   const [showContactForm, setShowContactForm] = useState(false);
 
   return (
-    <section id="portfolio" className="bg-secondary section-animate">
+    <section id="portfolio" className="bg-amber-50 section-animate">
       <div className="section-container">
         <div className="mb-16">
           <h2 className="section-title">Portfolio</h2>
@@ -90,10 +110,10 @@ const PortfolioSection = () => {
               <TabsTrigger 
                 key={category.id} 
                 value={category.id}
-                className="data-[state=active]:shadow-soft data-[state=active]:bg-white"
+                className={`data-[state=active]:shadow-soft data-[state=active]:${category.bgColor} data-[state=active]:${category.color}`}
               >
                 <div className="flex items-center gap-2">
-                  {category.icon}
+                  <span className={category.color}>{category.icon}</span>
                   <span className="hidden sm:inline">{category.name}</span>
                   <span className="sm:hidden">{category.name.split('&')[0]}</span>
                 </div>
@@ -103,8 +123,8 @@ const PortfolioSection = () => {
           
           {categories.map((category) => (
             <TabsContent key={category.id} value={category.id} className="mt-0">
-              <Card className="glassmorphism p-6">
-                <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
+              <Card className={`glassmorphism p-6 ${category.bgColor}`}>
+                <h3 className={`text-xl font-semibold mb-6 flex items-center gap-2 ${category.color}`}>
                   {category.icon}
                   <span>{category.name}</span>
                 </h3>
@@ -113,11 +133,11 @@ const PortfolioSection = () => {
                     <Button
                       key={index}
                       variant="outline"
-                      className="justify-start h-auto py-4 px-4 text-left hover:bg-blue-50 hover:text-blue-700"
+                      className={`justify-start h-auto py-4 px-4 text-left ${category.hoverBgColor} ${category.hoverColor}`}
                       onClick={() => setShowContactForm(true)}
                     >
                       <div className="flex items-start gap-3">
-                        <div className="h-2 w-2 rounded-full bg-blue-600 mt-2"></div>
+                        <div className={`h-2 w-2 rounded-full ${category.accentColor} mt-2`}></div>
                         <span>{item}</span>
                       </div>
                     </Button>

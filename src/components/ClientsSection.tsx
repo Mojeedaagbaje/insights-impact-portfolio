@@ -47,7 +47,7 @@ const ClientsSection = () => {
   ];
 
   return (
-    <section id="clients" className="section-animate bg-blue-50">
+    <section id="clients" className="section-animate bg-teal-50">
       <div className="section-container">
         <div className="mb-16 text-center">
           <h2 className="section-title mx-auto after:left-1/3">Trusted Clients</h2>
@@ -58,7 +58,7 @@ const ClientsSection = () => {
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5 mb-16">
           {clients.map((client, index) => (
-            <Card key={index} className="p-6 flex flex-col items-center justify-center glassmorphism card-hover">
+            <Card key={index} className="p-6 flex flex-col items-center justify-center glassmorphism card-hover bg-white/80 border-teal-200">
               <img 
                 src={client.logo} 
                 alt={client.name} 

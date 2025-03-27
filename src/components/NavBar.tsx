@@ -46,7 +46,7 @@ const NavBar = () => {
         <nav className="flex items-center justify-between">
           <div className="flex-shrink-0">
             <a href="#" className="text-xl font-bold tracking-tight">
-              <span className="text-primary">Analyst</span>Portfolio
+              <span className="text-primary">Mojeed Agbaje</span> Portfolio
             </a>
           </div>
 

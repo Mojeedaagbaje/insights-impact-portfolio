@@ -27,7 +27,7 @@ const AboutSection = () => {
     {
       icon: <Briefcase className="h-6 w-6 text-blue-600" />,
       title: "Proven Expertise",
-      description: "Certified Business Analyst, Agile Coach, and Project Manager with 12+ years of experience in Data, AI, Healthcare, E-commerce, Education, and Finance."
+      description: "Certified Business Analyst, Agile Coach, and Project Manager with experience in Data, AI, Healthcare, E-commerce, Education, and Finance."
     },
     {
       icon: <FileText className="h-6 w-6 text-blue-600" />,
@@ -48,7 +48,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="section-container section-animate">
+    <section id="about" className="section-container section-animate bg-cyan-50">
       <div className="mb-12">
         <h2 className="section-title">Why Work With Me</h2>
       </div>
@@ -61,7 +61,7 @@ const AboutSection = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {achievements.map((achievement, index) => (
-              <Card key={index} className="p-5 subtle-card card-hover">
+              <Card key={index} className="p-5 bg-white/80 shadow-sm border-cyan-200 card-hover">
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
                     {achievement.icon}
@@ -95,9 +95,9 @@ const AboutSection = () => {
 
         <div className="grid grid-cols-1 gap-6">
           {qualities.map((quality, index) => (
-            <Card key={index} className="subtle-card card-hover">
+            <Card key={index} className="bg-white/80 shadow-sm border-cyan-200 p-6 card-hover">
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-blue-50 rounded-lg">
+                <div className="p-3 bg-cyan-100 rounded-lg">
                   {quality.icon}
                 </div>
                 <div>

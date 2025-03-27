@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useEffect } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MessageSquare, FileText, Database, ArrowRight, Code, Cloud, Layers } from "lucide-react";
@@ -14,7 +14,9 @@ const ServicesSection = () => {
         "Business Requirements & Analysis",
         "Process Optimization & Workflow Automation"
       ],
-      bgColor: "bg-blue-50"
+      bgColor: "bg-blue-50",
+      hoverColor: "rgb(59, 130, 246, 0.15)", // blue
+      borderColor: "hover:border-blue-300"
     },
     {
       icon: <Cloud className="h-8 w-8 text-green-600" />,
@@ -24,7 +26,9 @@ const ServicesSection = () => {
         "Cloud Adoption & Migration Strategy",
         "Cloud Cost Optimization (Azure, AWS, GCP)"
       ],
-      bgColor: "bg-green-50"
+      bgColor: "bg-green-50",
+      hoverColor: "rgb(22, 163, 74, 0.15)", // green
+      borderColor: "hover:border-green-300"
     },
     {
       icon: <Database className="h-8 w-8 text-purple-600" />,
@@ -34,7 +38,9 @@ const ServicesSection = () => {
         "Data & AI Strategy & Roadmap",
         "AI/ML Product Development & Integration"
       ],
-      bgColor: "bg-purple-50"
+      bgColor: "bg-purple-50",
+      hoverColor: "rgb(147, 51, 234, 0.15)", // purple
+      borderColor: "hover:border-purple-300"
     },
     {
       icon: <Layers className="h-8 w-8 text-orange-600" />,
@@ -44,7 +50,9 @@ const ServicesSection = () => {
         "Agile Coaching & SAFe Implementation",
         "Product Roadmap & Sprint Planning"
       ],
-      bgColor: "bg-orange-50"
+      bgColor: "bg-orange-50",
+      hoverColor: "rgb(234, 88, 12, 0.15)", // orange
+      borderColor: "hover:border-orange-300"
     },
     {
       icon: <Code className="h-8 w-8 text-indigo-600" />,
@@ -54,9 +62,45 @@ const ServicesSection = () => {
         "Data Lakes & Warehousing",
         "CRM & ERP Implementations (SAP, Salesforce)"
       ],
-      bgColor: "bg-indigo-50"
+      bgColor: "bg-indigo-50",
+      hoverColor: "rgb(79, 70, 229, 0.15)", // indigo
+      borderColor: "hover:border-indigo-300"
     }
   ];
+
+  // Add cursor effect for services section
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      const cards = document.querySelectorAll('#services .service-card');
+      cards.forEach((card, index) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        if (
+          x > 0 && 
+          x < rect.width && 
+          y > 0 && 
+          y < rect.height
+        ) {
+          const service = services[index];
+          if (service) {
+            (card as HTMLElement).style.boxShadow = `0 0 30px ${service.hoverColor}`;
+            (card as HTMLElement).style.transform = 'translateY(-5px)';
+          }
+        } else {
+          (card as HTMLElement).style.boxShadow = '';
+          (card as HTMLElement).style.transform = '';
+        }
+      });
+    };
+
+    document.addEventListener('mousemove', handleMouseMove);
+    
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
 
   return (
     <section id="services" className="bg-gradient-to-b from-white to-gray-50 section-animate">
@@ -72,7 +116,7 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className={`glassmorphism overflow-hidden card-hover transition-all duration-300 border-[1.5px] border-transparent hover:border-blue-300 ${service.bgColor}`}
+              className={`service-card glassmorphism overflow-hidden transition-all duration-300 border-[1.5px] border-transparent ${service.borderColor} ${service.bgColor}`}
             >
               <div className="p-6 space-y-4">
                 <div className={`p-3 inline-flex rounded-lg`}>
