@@ -150,7 +150,7 @@ const ServicesSection = () => {
             <div className="flex items-center gap-2">
               <MessageSquare className="h-5 w-5 text-blue-600" />
               <p className="text-primary font-medium">
-                Need a custom solution? <Button variant="link" className="text-blue-600 p-0 h-auto" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>Get in Touch</Button>
+                Need a custom solution? <Button variant="link" className="text-blue-600 p-0 h-auto" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>Let's discuss your requirement</Button>
               </p>
             </div>
           </div>

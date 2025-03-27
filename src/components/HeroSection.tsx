@@ -24,7 +24,7 @@ const HeroSection = ({ onScrollDown }: HeroSectionProps) => {
               Hi, I am Mojeed Agbaje
             </p>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight text-primary">
-              Transforming <span className="text-blue-600">Insights</span> into <span className="text-blue-600">Impact</span>
+              I Transform <span className="text-blue-600">Insights</span> into <span className="text-blue-600">Impact</span>
             </h1>
             <p className="max-w-2xl mx-auto text-lg sm:text-xl text-muted-foreground">
               Empowering businesses with tailored strategies, innovative solutions, and sustainable growth.
@@ -32,10 +32,17 @@ const HeroSection = ({ onScrollDown }: HeroSectionProps) => {
           </div>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 animate-slide-up" style={{ animationDelay: "0.3s" }}>
-            <Button className="button-primary text-base px-8 py-6">
+            <Button 
+              className="button-primary text-base px-8 py-6"
+              onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               View My Services
             </Button>
-            <Button variant="outline" className="text-base px-8 py-6">
+            <Button 
+              variant="outline" 
+              className="text-base px-8 py-6"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Let's Connect
             </Button>
           </div>
