@@ -29,7 +29,7 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="section-container section-animate">
+    <section id="contact" className="section-container section-animate bg-gray-50">
       <div className="mb-16">
         <h2 className="section-title">Get in Touch</h2>
         <p className="mt-6 text-lg text-muted-foreground max-w-3xl">
@@ -101,38 +101,54 @@ const ContactSection = () => {
             <form className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label htmlFor="name" className="text-sm font-medium">
-                    Your Name
+                  <label htmlFor="name" className="text-sm font-medium flex items-center">
+                    Your Name <span className="text-red-500 ml-1">*</span>
                   </label>
                   <Input 
                     id="name" 
                     placeholder="John Doe" 
                     className="bg-white/70"
+                    required
                   />
                 </div>
                 
                 <div className="space-y-2">
-                  <label htmlFor="email" className="text-sm font-medium">
-                    Email Address
+                  <label htmlFor="email" className="text-sm font-medium flex items-center">
+                    Email Address <span className="text-red-500 ml-1">*</span>
                   </label>
                   <Input 
                     id="email" 
                     type="email" 
                     placeholder="john@example.com" 
                     className="bg-white/70"
+                    required
                   />
                 </div>
               </div>
-              
-              <div className="space-y-2">
-                <label htmlFor="company" className="text-sm font-medium">
-                  Company Name
-                </label>
-                <Input 
-                  id="company" 
-                  placeholder="Your Company" 
-                  className="bg-white/70"
-                />
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <label htmlFor="phone" className="text-sm font-medium">
+                    Phone Number
+                  </label>
+                  <Input 
+                    id="phone" 
+                    type="tel" 
+                    placeholder="(123) 456-7890" 
+                    className="bg-white/70"
+                  />
+                </div>
+                
+                <div className="space-y-2">
+                  <label htmlFor="company" className="text-sm font-medium">
+                    Company Name
+                  </label>
+                  <Input 
+                    id="company" 
+                    placeholder="Your Company" 
+                    className="bg-white/70"
+                  />
+                </div>
               </div>
               
               <div className="space-y-2">

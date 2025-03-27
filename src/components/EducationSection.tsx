@@ -17,19 +17,19 @@ const EducationSection = () => {
     {
       degree: "Master of Science (M.Sc.)",
       institution: "Obafemi Awolowo University",
-      period: "2010 - 2012",
+      period: "2015 - 2017",
       description: "Specialized in strategic business management and technology implementation."
     },
     {
       degree: "Bachelor of Science (B.Sc.)",
       institution: "University of Ilorin",
-      period: "2005 - 2009",
+      period: "2006 - 2010",
       description: "Focus on business and technology applications."
     },
     {
       degree: "Postgraduate Diploma in Data Science and AI",
       institution: "University of Texas, Austin",
-      period: "2019 - 2020",
+      period: "In View",
       description: "Advanced studies in artificial intelligence, machine learning, and data analytics."
     }
   ];
@@ -80,7 +80,13 @@ const EducationSection = () => {
   ];
 
   const memberships = [
-    "IIBA", "TBM Council", "FinOps Foundation", "PMI", "ISC2", "Scrum Alliance", "SAFe"
+    { name: "IIBA", logo: "https://via.placeholder.com/60x60?text=IIBA" },
+    { name: "TBM Council", logo: "https://via.placeholder.com/60x60?text=TBM" }, 
+    { name: "FinOps Foundation", logo: "https://via.placeholder.com/60x60?text=FinOps" }, 
+    { name: "PMI", logo: "https://via.placeholder.com/60x60?text=PMI" }, 
+    { name: "ISC2", logo: "https://via.placeholder.com/60x60?text=ISC2" },
+    { name: "Scrum Alliance", logo: "https://via.placeholder.com/60x60?text=Scrum" }, 
+    { name: "SAFe", logo: "https://via.placeholder.com/60x60?text=SAFe" }
   ];
 
   return (
@@ -160,9 +166,9 @@ const EducationSection = () => {
         
         {/* Professional Memberships Banner */}
         <div className="mt-16 py-8 px-8 bg-blue-50 rounded-xl border border-blue-100">
-          <div className="flex items-center gap-3 mb-4">
-            <Users className="h-5 w-5 text-blue-600" />
-            <h4 className="text-lg font-medium">Professional Memberships</h4>
+          <div className="flex items-center gap-3 mb-6">
+            <Users className="h-6 w-6 text-blue-600" />
+            <h4 className="text-xl font-semibold">Professional Memberships</h4>
           </div>
           
           <div className="relative overflow-hidden py-4">
@@ -176,9 +182,12 @@ const EducationSection = () => {
               <CarouselContent>
                 {memberships.map((membership, index) => (
                   <CarouselItem key={index} className="basis-1/3 md:basis-1/5 lg:basis-1/7">
-                    <Badge className="bg-blue-50 text-blue-600 hover:bg-blue-100 py-2 px-4 text-center w-full">
-                      {membership}
-                    </Badge>
+                    <div className="flex flex-col items-center gap-2 bg-white rounded-lg p-4 text-center card-hover">
+                      <img src={membership.logo} alt={membership.name} className="w-16 h-16 object-contain mb-2" />
+                      <Badge className="bg-blue-50 text-blue-600 hover:bg-blue-100 py-2 px-4 text-center">
+                        {membership.name}
+                      </Badge>
+                    </div>
                   </CarouselItem>
                 ))}
               </CarouselContent>

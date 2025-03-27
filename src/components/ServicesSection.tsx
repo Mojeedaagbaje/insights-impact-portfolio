@@ -13,48 +13,53 @@ const ServicesSection = () => {
       features: [
         "Business Requirements & Analysis",
         "Process Optimization & Workflow Automation"
-      ]
+      ],
+      bgColor: "bg-blue-50"
     },
     {
-      icon: <Cloud className="h-8 w-8 text-blue-600" />,
+      icon: <Cloud className="h-8 w-8 text-green-600" />,
       title: "Cloud & FinOps Strategy",
       description: "Optimize cloud investments through cloud strategy, cost management, governance, and performance monitoring.",
       features: [
         "Cloud Adoption & Migration Strategy",
         "Cloud Cost Optimization (Azure, AWS, GCP)"
-      ]
+      ],
+      bgColor: "bg-green-50"
     },
     {
-      icon: <Database className="h-8 w-8 text-blue-600" />,
+      icon: <Database className="h-8 w-8 text-purple-600" />,
       title: "Data & AI Solutions",
       description: "Transform data into actionable insights and align AI/ML solutions with business objectives.",
       features: [
         "Data & AI Strategy & Roadmap",
         "AI/ML Product Development & Integration"
-      ]
+      ],
+      bgColor: "bg-purple-50"
     },
     {
-      icon: <Layers className="h-8 w-8 text-blue-600" />,
+      icon: <Layers className="h-8 w-8 text-orange-600" />,
       title: "Product Management & Agile Consulting",
       description: "Deliver scalable, user-centric digital solutions through agile methodologies and strategic product planning.",
       features: [
         "Agile Coaching & SAFe Implementation",
         "Product Roadmap & Sprint Planning"
-      ]
+      ],
+      bgColor: "bg-orange-50"
     },
     {
-      icon: <Code className="h-8 w-8 text-blue-600" />,
+      icon: <Code className="h-8 w-8 text-indigo-600" />,
       title: "Enterprise Architecture & IT Solutions",
       description: "Design and implement scalable IT infrastructures to drive efficiency, innovation, and business growth.",
       features: [
         "Data Lakes & Warehousing",
         "CRM & ERP Implementations (SAP, Salesforce)"
-      ]
+      ],
+      bgColor: "bg-indigo-50"
     }
   ];
 
   return (
-    <section id="services" className="bg-secondary section-animate">
+    <section id="services" className="bg-gradient-to-b from-white to-gray-50 section-animate">
       <div className="section-container">
         <div className="mb-16">
           <h2 className="section-title">How I Can Support Your Business</h2>
@@ -65,9 +70,14 @@ const ServicesSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <Card key={index} className="glassmorphism overflow-hidden card-hover">
+            <Card 
+              key={index} 
+              className={`glassmorphism overflow-hidden card-hover transition-all duration-300 border-[1.5px] border-transparent hover:border-blue-300 ${service.bgColor}`}
+            >
               <div className="p-6 space-y-4">
-                <div className="p-3 bg-blue-50 inline-flex rounded-lg">{service.icon}</div>
+                <div className={`p-3 inline-flex rounded-lg`}>
+                  {service.icon}
+                </div>
                 <h3 className="text-xl font-semibold">{service.title}</h3>
                 <p className="text-muted-foreground text-sm">{service.description}</p>
                 
@@ -80,7 +90,7 @@ const ServicesSection = () => {
                   ))}
                 </ul>
                 
-                <Button variant="ghost" className="group p-0 h-auto text-blue-600">
+                <Button variant="ghost" className="group p-0 h-auto text-blue-600 hover:text-blue-800 hover:bg-transparent">
                   <span className="flex items-center gap-1">
                     Learn more 
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -92,7 +102,7 @@ const ServicesSection = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <div className="glassmorphism inline-block px-6 py-3 rounded-full">
+          <div className="glassmorphism inline-block px-6 py-3 rounded-full bg-blue-50">
             <div className="flex items-center gap-2">
               <MessageSquare className="h-5 w-5 text-blue-600" />
               <p className="text-primary font-medium">

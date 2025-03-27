@@ -52,6 +52,37 @@ const Index = () => {
     };
   }, []);
 
+  // Add cursor effect for services section
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      const cards = document.querySelectorAll('#services .card-hover');
+      cards.forEach((card) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        if (
+          x > 0 && 
+          x < rect.width && 
+          y > 0 && 
+          y < rect.height
+        ) {
+          (card as HTMLElement).style.boxShadow = `0 0 30px rgba(59, 130, 246, 0.15)`;
+          (card as HTMLElement).style.transform = 'translateY(-5px)';
+        } else {
+          (card as HTMLElement).style.boxShadow = '';
+          (card as HTMLElement).style.transform = '';
+        }
+      });
+    };
+
+    document.addEventListener('mousemove', handleMouseMove);
+    
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
+
   const scrollToSections = () => {
     if (sectionsRef.current) {
       sectionsRef.current.scrollIntoView({ behavior: "smooth" });
