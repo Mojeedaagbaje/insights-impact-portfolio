@@ -61,7 +61,7 @@ const NavBar = () => {
                 {link.name}
               </a>
             ))}
-            <Button className="button-primary ml-4">Get in Touch</Button>
+            <Button className="button-primary ml-4" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>Get in Touch</Button>
           </div>
 
           {/* Mobile Navigation Toggle */}
@@ -94,7 +94,7 @@ const NavBar = () => {
                   {link.name}
                 </a>
               ))}
-              <Button className="button-primary mt-2 w-full">Get in Touch</Button>
+              <Button className="button-primary mt-2 w-full" onClick={() => { document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); toggleMenu(); }}>Get in Touch</Button>
             </div>
           </div>
         )}

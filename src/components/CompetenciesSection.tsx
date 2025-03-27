@@ -23,32 +23,62 @@ const CompetenciesSection = () => {
     {
       icon: <FileText className="h-6 w-6 text-blue-600" />,
       title: "Business Analysis",
-      description: "Capturing requirements, analyzing processes, and aligning technology solutions with business objectives."
+      description: "Capturing requirements, analyzing processes, and aligning technology solutions with business objectives.",
+      bgColor: "bg-blue-50",
+      textColor: "text-blue-700",
+      borderColor: "border-blue-200",
+      hoverBgColor: "hover:bg-blue-100",
+      hoverBorderColor: "hover:border-blue-300"
     },
     {
-      icon: <TrendingUp className="h-6 w-6 text-blue-600" />,
+      icon: <TrendingUp className="h-6 w-6 text-indigo-600" />,
       title: "Strategy Planning",
-      description: "Developing actionable roadmaps and strategic initiatives to achieve business goals."
+      description: "Developing actionable roadmaps and strategic initiatives to achieve business goals.",
+      bgColor: "bg-indigo-50",
+      textColor: "text-indigo-700",
+      borderColor: "border-indigo-200",
+      hoverBgColor: "hover:bg-indigo-100",
+      hoverBorderColor: "hover:border-indigo-300"
     },
     {
-      icon: <Briefcase className="h-6 w-6 text-blue-600" />,
+      icon: <Briefcase className="h-6 w-6 text-purple-600" />,
       title: "Project & Program Management",
-      description: "Delivering complex initiatives on time and within budget through structured methodologies."
+      description: "Delivering complex initiatives on time and within budget through structured methodologies.",
+      bgColor: "bg-purple-50",
+      textColor: "text-purple-700",
+      borderColor: "border-purple-200",
+      hoverBgColor: "hover:bg-purple-100",
+      hoverBorderColor: "hover:border-purple-300"
     },
     {
-      icon: <Cloud className="h-6 w-6 text-blue-600" />,
+      icon: <Cloud className="h-6 w-6 text-cyan-600" />,
       title: "Cloud & FinOps Strategy",
-      description: "Optimizing cloud investments through strategic planning, governance and cost management."
+      description: "Optimizing cloud investments through strategic planning, governance and cost management.",
+      bgColor: "bg-cyan-50",
+      textColor: "text-cyan-700",
+      borderColor: "border-cyan-200",
+      hoverBgColor: "hover:bg-cyan-100",
+      hoverBorderColor: "hover:border-cyan-300"
     },
     {
-      icon: <Database className="h-6 w-6 text-blue-600" />,
+      icon: <Database className="h-6 w-6 text-green-600" />,
       title: "AI & Data Analytics",
-      description: "Transforming data into actionable insights through advanced analytics and AI solutions."
+      description: "Transforming data into actionable insights through advanced analytics and AI solutions.",
+      bgColor: "bg-green-50",
+      textColor: "text-green-700",
+      borderColor: "border-green-200",
+      hoverBgColor: "hover:bg-green-100",
+      hoverBorderColor: "hover:border-green-300"
     },
     {
-      icon: <Code className="h-6 w-6 text-blue-600" />,
+      icon: <Code className="h-6 w-6 text-amber-600" />,
       title: "Enterprise Architecture",
-      description: "Designing scalable IT infrastructures that drive business innovation and efficiency."
+      description: "Designing scalable IT infrastructures that drive business innovation and efficiency.",
+      bgColor: "bg-amber-50",
+      textColor: "text-amber-700",
+      borderColor: "border-amber-200",
+      hoverBgColor: "hover:bg-amber-100",
+      hoverBorderColor: "hover:border-amber-300"
     }
   ];
 
@@ -87,12 +117,15 @@ const CompetenciesSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {coreCompetencies.map((competency, index) => (
-            <Card key={index} className="subtle-card card-hover">
-              <div className="space-y-4">
-                <div className="p-3 bg-blue-50 inline-flex rounded-lg">
+            <Card 
+              key={index} 
+              className={`transition-all duration-300 border ${competency.borderColor} ${competency.bgColor} ${competency.hoverBgColor} ${competency.hoverBorderColor} hover:shadow-md hover:-translate-y-1`}
+            >
+              <div className="space-y-4 p-6">
+                <div className={`p-3 ${competency.bgColor} inline-flex rounded-lg`}>
                   {competency.icon}
                 </div>
-                <h3 className="text-lg font-semibold">{competency.title}</h3>
+                <h3 className={`text-lg font-semibold ${competency.textColor}`}>{competency.title}</h3>
                 <p className="text-muted-foreground text-sm">{competency.description}</p>
               </div>
             </Card>
