@@ -5,13 +5,40 @@ import { Card } from "@/components/ui/card";
 const ClientsSection = () => {
   const clients = [
     {
+      name: "Provincial Health Services Authority (PHSA)",
+      logo: "/lovable-uploads/7ca25041-2f8e-4690-a45b-27ce15510aa4.png",
+      industry: "Healthcare",
+      bgColor: "bg-purple-50",
+      hoverBgColor: "hover:bg-purple-100",
+      borderColor: "border-purple-200",
+      hoverBorderColor: "hover:border-purple-300"
+    },
+    {
       name: "Frontier Vista Global Inc.",
-      logo: "https://via.placeholder.com/150x60?text=Frontier+Vista",
+      logo: "/lovable-uploads/795e624a-3039-4c07-8de3-4367a714d99c.png",
       industry: "Technology",
       bgColor: "bg-blue-50",
       hoverBgColor: "hover:bg-blue-100",
       borderColor: "border-blue-200",
       hoverBorderColor: "hover:border-blue-300"
+    },
+    {
+      name: "Prima Matrix Ltd.",
+      logo: "/lovable-uploads/eba00fd7-6095-497f-ae71-8941dcb07429.png",
+      industry: "Consulting",
+      bgColor: "bg-indigo-50",
+      hoverBgColor: "hover:bg-indigo-100",
+      borderColor: "border-indigo-200",
+      hoverBorderColor: "hover:border-indigo-300"
+    },
+    {
+      name: "Nova Peer Inc.",
+      logo: "/lovable-uploads/9db82d66-2529-43ca-a00c-a9f837c25796.png",
+      industry: "Finance",
+      bgColor: "bg-yellow-50",
+      hoverBgColor: "hover:bg-yellow-100",
+      borderColor: "border-yellow-200",
+      hoverBorderColor: "hover:border-yellow-300"
     },
     {
       name: "Government of Alberta – Ministry of Technology & Innovation",
@@ -21,33 +48,6 @@ const ClientsSection = () => {
       hoverBgColor: "hover:bg-green-100",
       borderColor: "border-green-200",
       hoverBorderColor: "hover:border-green-300"
-    },
-    {
-      name: "Provincial Health Services Authority (PHSA)",
-      logo: "https://via.placeholder.com/150x60?text=PHSA",
-      industry: "Healthcare",
-      bgColor: "bg-purple-50",
-      hoverBgColor: "hover:bg-purple-100",
-      borderColor: "border-purple-200",
-      hoverBorderColor: "hover:border-purple-300"
-    },
-    {
-      name: "Nova Peer Inc.",
-      logo: "https://via.placeholder.com/150x60?text=Nova+Peer",
-      industry: "Finance",
-      bgColor: "bg-yellow-50",
-      hoverBgColor: "hover:bg-yellow-100",
-      borderColor: "border-yellow-200",
-      hoverBorderColor: "hover:border-yellow-300"
-    },
-    {
-      name: "Prima Matrix Ltd.",
-      logo: "https://via.placeholder.com/150x60?text=Prima+Matrix",
-      industry: "Consulting",
-      bgColor: "bg-indigo-50",
-      hoverBgColor: "hover:bg-indigo-100",
-      borderColor: "border-indigo-200",
-      hoverBorderColor: "hover:border-indigo-300"
     },
     {
       name: "Afroshop",
@@ -94,12 +94,14 @@ const ClientsSection = () => {
               key={index} 
               className={`p-6 flex flex-col items-center justify-center glassmorphism card-hover ${client.bgColor} ${client.hoverBgColor} border ${client.borderColor} ${client.hoverBorderColor} transition-all duration-300 hover:-translate-y-2 hover:shadow-md`}
             >
-              <img 
-                src={client.logo} 
-                alt={client.name} 
-                className="max-h-12 w-auto opacity-80 hover:opacity-100 transition-opacity mb-3"
-              />
-              <p className="text-center text-sm font-medium">{client.name}</p>
+              <div className="h-16 flex items-center justify-center mb-3">
+                <img 
+                  src={client.logo} 
+                  alt={client.name} 
+                  className="max-h-16 w-auto max-w-full object-contain opacity-90 hover:opacity-100 transition-opacity"
+                />
+              </div>
+              <p className="text-center text-sm font-medium mt-2">{client.name}</p>
               <p className="text-xs text-muted-foreground">{client.industry}</p>
             </Card>
           ))}

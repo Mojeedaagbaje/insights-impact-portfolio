@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Separator } from "@/components/ui/separator";
 import { Github, Linkedin, Twitter, Mail } from "lucide-react";
@@ -22,10 +21,10 @@ const Footer = () => {
               <a href="https://www.linkedin.com/in/mojeedagbaje/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-gray-500 hover:text-primary transition-colors">
                 <Linkedin size={20} />
               </a>
-              <a href="#" aria-label="GitHub" className="text-gray-500 hover:text-primary transition-colors">
+              <a href="https://github.com/mojeedagbaje" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-gray-500 hover:text-primary transition-colors">
                 <Github size={20} />
               </a>
-              <a href="#" aria-label="Email" className="text-gray-500 hover:text-primary transition-colors">
+              <a href="mailto:hello@mojeedagbaje.com" aria-label="Email" className="text-gray-500 hover:text-primary transition-colors">
                 <Mail size={20} />
               </a>
             </div>
