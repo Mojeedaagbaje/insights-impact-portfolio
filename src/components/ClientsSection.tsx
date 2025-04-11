@@ -78,6 +78,13 @@ const ClientsSection = () => {
     }
   ];
 
+  // Function to handle image loading errors
+  const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+    const imgElement = e.currentTarget;
+    imgElement.onerror = null; // Prevent infinite loops
+    imgElement.src = "https://via.placeholder.com/150x60?text=" + encodeURIComponent(imgElement.alt);
+  };
+
   return (
     <section id="clients" className="section-animate bg-teal-50">
       <div className="section-container">
@@ -99,6 +106,7 @@ const ClientsSection = () => {
                   src={client.logo} 
                   alt={client.name} 
                   className="max-h-16 w-auto max-w-full object-contain opacity-90 hover:opacity-100 transition-opacity"
+                  onError={handleImageError}
                 />
               </div>
               <p className="text-center text-sm font-medium mt-2">{client.name}</p>
