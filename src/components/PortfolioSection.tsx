@@ -104,7 +104,7 @@ const PortfolioSection = () => {
   return (
     <section id="portfolio" className="bg-amber-50 section-animate">
       <div className="section-container">
-        <div className="mb-16">
+        <div className="mb-12">
           <h2 className="section-title">Portfolio</h2>
           <p className="mt-6 text-lg text-muted-foreground max-w-3xl">
             Browse through samples of my work deliverables across different domains. These documents showcase my approach to solving complex business challenges.
@@ -112,16 +112,18 @@ const PortfolioSection = () => {
         </div>
 
         <Tabs defaultValue="business-analysis" className="w-full">
-          <TabsList className={`flex flex-wrap ${isMobile ? 'gap-2 bg-transparent justify-center' : 'grid grid-cols-4 mb-8 bg-transparent'}`}>
+          <TabsList className={`flex flex-wrap ${isMobile ? 'gap-1 bg-transparent justify-center mb-10' : 'grid grid-cols-4 mb-8 bg-transparent'}`}>
             {categories.map((category) => (
               <TabsTrigger 
                 key={category.id} 
                 value={category.id}
-                className={`data-[state=active]:shadow-soft data-[state=active]:${category.bgColor} data-[state=active]:${category.color} ${isMobile ? 'flex-1 min-w-[45%] text-xs py-1' : ''}`}
+                className={`data-[state=active]:shadow-soft data-[state=active]:${category.bgColor} data-[state=active]:${category.color} ${isMobile ? 'flex-1 min-w-[45%] text-xs py-1 px-1' : ''}`}
               >
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-1">
                   <span className={category.color}>{category.icon}</span>
-                  <span>{isMobile ? category.shortName : category.name.split('&')[0]}</span>
+                  <span className={`${isMobile ? 'text-xs' : ''}`}>
+                    {isMobile ? category.shortName : category.name.split('&')[0]}
+                  </span>
                 </div>
               </TabsTrigger>
             ))}
@@ -130,7 +132,7 @@ const PortfolioSection = () => {
           {categories.map((category) => (
             <TabsContent key={category.id} value={category.id} className="mt-4">
               <Card className={`glassmorphism p-6 ${category.bgColor}`}>
-                <h3 className={`text-xl font-semibold mb-6 flex items-center gap-2 ${category.color}`}>
+                <h3 className={`text-lg font-semibold mb-6 flex items-center gap-2 ${category.color}`}>
                   {category.icon}
                   <span>{category.name}</span>
                 </h3>
@@ -139,12 +141,12 @@ const PortfolioSection = () => {
                     <Button
                       key={index}
                       variant="outline"
-                      className={`justify-start h-auto py-4 px-4 text-left transition-all duration-300 ${category.hoverBgColor} ${category.hoverColor}`}
+                      className={`justify-start h-auto py-3 px-3 text-left transition-all duration-300 ${category.hoverBgColor} ${category.hoverColor}`}
                       onClick={() => setShowContactForm(true)}
                     >
-                      <div className="flex items-start gap-3">
+                      <div className="flex items-start gap-2">
                         <div className={`h-2 w-2 rounded-full ${category.accentColor} mt-2`}></div>
-                        <span>{item}</span>
+                        <span className="text-sm">{item}</span>
                       </div>
                     </Button>
                   ))}

@@ -74,7 +74,9 @@ const TechnologiesSection = () => {
         "Salesforce",
         "Oracle Siebel CRM",
         "ServiceNow",
-        "Workday"
+        "Workday",
+        "Cerner Millennium",
+        "Meditech"
       ],
       color: "text-orange-600",
       bgColor: "bg-orange-50",
@@ -85,7 +87,7 @@ const TechnologiesSection = () => {
 
   return (
     <section id="technologies" className="section-container section-animate bg-slate-50">
-      <div className="mb-16">
+      <div className="mb-12">
         <h2 className="section-title">Technologies I Work With</h2>
         <p className="mt-6 text-lg text-muted-foreground max-w-3xl">
           I leverage a diverse set of tools and technologies to analyze data, create visualizations, and deliver insights that drive business decisions.
@@ -93,16 +95,16 @@ const TechnologiesSection = () => {
       </div>
 
       <Tabs defaultValue="data-analysis" className="w-full">
-        <TabsList className={`flex flex-wrap ${isMobile ? 'gap-2 bg-transparent justify-center' : 'grid grid-cols-4 mb-8 bg-transparent'}`}>
+        <TabsList className={`flex flex-wrap ${isMobile ? 'gap-2 bg-transparent justify-center mb-10' : 'grid grid-cols-4 mb-8 bg-transparent'}`}>
           {categories.map((category) => (
             <TabsTrigger 
               key={category.id} 
               value={category.id}
-              className={`data-[state=active]:shadow-soft data-[state=active]:${category.bgColor} data-[state=active]:${category.color} ${isMobile ? 'flex-1 min-w-[45%] text-xs py-1' : ''}`}
+              className={`data-[state=active]:shadow-soft data-[state=active]:${category.bgColor} data-[state=active]:${category.color} ${isMobile ? 'flex-1 min-w-[45%] text-xs py-1 px-1' : ''}`}
             >
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-1">
                 <span className={category.color}>{category.icon}</span>
-                <span>{isMobile ? category.shortName : category.name}</span>
+                <span className={`${isMobile ? 'text-xs' : ''}`}>{isMobile ? category.shortName : category.name}</span>
               </div>
             </TabsTrigger>
           ))}
@@ -121,7 +123,7 @@ const TechnologiesSection = () => {
                     className={`flex items-center p-4 bg-white/50 rounded-lg shadow-sm card-hover transition-all duration-300 ${category.hoverBgColor}`}
                   >
                     <div className={`h-2 w-2 rounded-full ${category.accentColor} mr-3`}></div>
-                    <span className={category.color}>{tech}</span>
+                    <span className={`${category.color} text-sm`}>{tech}</span>
                   </div>
                 ))}
               </div>
