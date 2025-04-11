@@ -16,10 +16,10 @@ const Footer = () => {
               Transforming data into actionable insights and strategic recommendations.
             </p>
             <div className="flex space-x-4 pt-2">
-              <a href="#" aria-label="Twitter" className="text-gray-500 hover:text-primary transition-colors">
+              <a href="https://twitter.com/hadeytweet" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-gray-500 hover:text-primary transition-colors">
                 <Twitter size={20} />
               </a>
-              <a href="#" aria-label="LinkedIn" className="text-gray-500 hover:text-primary transition-colors">
+              <a href="https://www.linkedin.com/in/mojeedagbaje/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-gray-500 hover:text-primary transition-colors">
                 <Linkedin size={20} />
               </a>
               <a href="#" aria-label="GitHub" className="text-gray-500 hover:text-primary transition-colors">
