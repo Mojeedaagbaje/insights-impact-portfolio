@@ -20,22 +20,22 @@ const EducationSection = () => {
     {
       degree: "Bachelor of Science (B.Sc.)",
       institution: "University of Ilorin",
-      logo: "/lovable-uploads/5181a364-9490-48cb-9734-7b829f7f7839.png",
-      period: "2006 - 2010",
+      logo: "/lovable-uploads/a7c15a4b-9760-4325-9c56-a275bcc72c56.png", // University of Ilorin logo
+      period: "2010",
       description: "Focus on business and technology applications."
     },
     {
       degree: "Master of Science (M.Sc.)",
       institution: "Obafemi Awolowo University",
-      logo: "/lovable-uploads/e34d9a1d-18da-44cc-9c8c-2e4f490ef741.png",
-      period: "2015 - 2017",
+      logo: "/lovable-uploads/64eda1f4-966f-4cdd-9b9a-3fd354d6d5b2.png", // Obafemi Awolowo University logo
+      period: "2017",
       description: "Specialized in strategic business management and technology implementation."
     },
     {
       degree: "Postgraduate Diploma in Data Science and AI",
       institution: "University of Texas, Austin",
-      logo: "/lovable-uploads/1367b2e1-72b3-4319-b682-8827012362b4.png",
-      period: "In View",
+      logo: "/lovable-uploads/6f25ae04-55d9-443e-91b9-74a90011951c.png", // University of Texas, Austin logo
+      period: "2025",
       description: "Advanced studies in artificial intelligence, machine learning, and data analytics."
     },
     {
