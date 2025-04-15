@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Card } from "@/components/ui/card";
 import { GraduationCap, Award, Clock, BookOpen, Users } from "lucide-react";
@@ -41,7 +40,7 @@ const EducationSection = () => {
     {
       degree: "Project Management in Global Health",
       institution: "University of Washington",
-      logo: "/lovable-uploads/6e8b1f2d-3a50-48b1-85dd-82523bebeafa.png",
+      logo: "/lovable-uploads/6e8b1f2d-3a50-48b1-85dd-82523bebeafa.png", // University of Washington logo
       period: "2025",
       description: "Specialized training in managing healthcare projects with global impact."
     }
@@ -102,7 +101,6 @@ const EducationSection = () => {
     { name: "SAFe", logo: "/lovable-uploads/9253c9e0-584a-43fc-aecf-c6b96f01a207.png" }
   ];
 
-  // Function to handle image loading errors
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
     const imgElement = e.currentTarget;
     imgElement.onerror = null; // Prevent infinite loops
@@ -116,7 +114,6 @@ const EducationSection = () => {
           <h2 className="section-title mx-auto after:left-1/3">Education and Certifications</h2>
         </div>
 
-        {/* Education Section - Horizontal Layout */}
         <div className="mb-16">
           <div className="flex items-center gap-3 mb-8">
             <GraduationCap className="h-6 w-6 text-indigo-600" />
@@ -149,7 +146,6 @@ const EducationSection = () => {
           </div>
         </div>
 
-        {/* Professional Certifications */}
         <div className="mb-16">
           <div className="flex items-center gap-3 mb-8">
             <Award className="h-6 w-6 text-indigo-600" />
@@ -201,7 +197,6 @@ const EducationSection = () => {
           </Tabs>
         </div>
         
-        {/* Professional Memberships Banner */}
         <div className="py-10 px-8 bg-indigo-100 rounded-xl border border-indigo-200">
           <div className="flex items-center gap-3 mb-6">
             <Users className="h-6 w-6 text-indigo-600" />

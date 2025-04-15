@@ -17,17 +17,17 @@ const TechnologiesSection = () => {
       technologies: [
         {
           name: "Power BI",
-          logo: "/lovable-uploads/bd6b16f3-5421-4974-8ba5-83e7aacf2e5a.png", // Meditech logo used for Power BI
+          logo: "/lovable-uploads/bd6b16f3-5421-4974-8ba5-83e7aacf2e5a.png", // Meditech logo for Power BI
           fallbackLogo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg"
         },
         {
           name: "Tableau",
-          logo: "/lovable-uploads/72f637aa-9388-4ede-ae01-02f1c6805510.png", // AWS logo used for Tableau
+          logo: "/lovable-uploads/72f637aa-9388-4ede-ae01-02f1c6805510.png", // AWS logo for Tableau
           fallbackLogo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg"
         },
         {
           name: "SAS",
-          logo: "/lovable-uploads/e9b9d818-60a7-474d-b0cc-68e2853d45b8.png", // IBM Cloud logo used for SAS
+          logo: "/lovable-uploads/e9b9d818-60a7-474d-b0cc-68e2853d45b8.png", // IBM Cloud logo for SAS
           fallbackLogo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
         },
         {
@@ -59,22 +59,22 @@ const TechnologiesSection = () => {
       technologies: [
         {
           name: "Microsoft Azure",
-          logo: "/lovable-uploads/6f985009-a204-44a4-8711-aa5fb81608df.png", // Azure DevOps logo used for Microsoft Azure
+          logo: "/lovable-uploads/6f985009-a204-44a4-8711-aa5fb81608df.png", // Azure DevOps logo
           fallbackLogo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"
         },
         {
           name: "Amazon Web Services (AWS)",
-          logo: "/lovable-uploads/05f36fa4-ff3e-4bc8-84d6-b5b0639f5b86.png", // Microsoft Fabric logo used for AWS
+          logo: "/lovable-uploads/05f36fa4-ff3e-4bc8-84d6-b5b0639f5b86.png", // AWS logo
           fallbackLogo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg"
         },
         {
           name: "Google Cloud Platform",
-          logo: "/lovable-uploads/353a6deb-ddd5-4ede-8090-a914b804f394.png", // SAS logo used for GCP
+          logo: "/lovable-uploads/353a6deb-ddd5-4ede-8090-a914b804f394.png", // Google Cloud Platform logo
           fallbackLogo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
         },
         {
           name: "IBM Cloud",
-          logo: "/lovable-uploads/04eda1f4-966f-4cdd-9b9a-3fd354d6d5b2.png", // Alibaba Cloud logo used for IBM Cloud
+          logo: "/lovable-uploads/04eda1f4-966f-4cdd-9b9a-3fd354d6d5b2.png", // IBM Cloud logo
           fallbackLogo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/debian/debian-original.svg"
         },
         {
@@ -84,7 +84,7 @@ const TechnologiesSection = () => {
         },
         {
           name: "Alibaba Cloud",
-          logo: "/lovable-uploads/323ee68b-6f68-4217-a1c2-7fac60628f7f.png", // Oracle Siebel CRM logo used for Alibaba Cloud
+          logo: "/lovable-uploads/323ee68b-6f68-4217-a1c2-7fac60628f7f.png", // Alibaba Cloud logo
           fallbackLogo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg"
         }
       ],
@@ -101,7 +101,7 @@ const TechnologiesSection = () => {
       technologies: [
         {
           name: "Jira",
-          logo: "/lovable-uploads/25b1e4d9-9153-4366-a197-f10587b083d5.png", // Microsoft Dynamics logo (M365)
+          logo: "/lovable-uploads/25b1e4d9-9153-4366-a197-f10587b083d5.png", // Microsoft Dynamics logo
           fallbackLogo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg"
         },
         {
@@ -111,22 +111,22 @@ const TechnologiesSection = () => {
         },
         {
           name: "Figma",
-          logo: "/lovable-uploads/7a3321d1-8809-4877-82db-cb67316553b7.png", // Previous Figma logo
+          logo: "/lovable-uploads/11da-434d-83d9-45103adb7039.png", // Previous Figma logo
           fallbackLogo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
         },
         {
           name: "Balsamiq",
-          logo: "/lovable-uploads/11da-434d-83d9-45103adb7039.png", // Digital Ocean logo
+          logo: "/lovable-uploads/28a6ec74-0f4a-4009-9fab-9174ce01d26d.png", // Digital Ocean logo for Balsamiq
           fallbackLogo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg"
         },
         {
           name: "Microsoft Visio",
-          logo: "/lovable-uploads/7a3321d1-8809-4877-82db-cb67316553b7.png", // Using the current Figma logo for Visio
+          logo: "/lovable-uploads/7a3321d1-8809-4877-82db-cb67316553b7.png", // Microsoft Visio logo
           fallbackLogo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg"
         },
         {
           name: "Miro",
-          logo: "/lovable-uploads/2225dbac-461e-4638-9641-7bef49358aee.png", // Keep Miro logo (same)
+          logo: "/lovable-uploads/2225dbac-461e-4638-9641-7bef49358aee.png", // Keep Miro logo
           fallbackLogo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg"
         }
       ],
@@ -143,7 +143,7 @@ const TechnologiesSection = () => {
       technologies: [
         {
           name: "Microsoft Dynamics 365",
-          logo: "/lovable-uploads/34786a71-30be-465f-b2eb-161c8eaa9ff1.png", // Microsoft Dynamics 365
+          logo: "/lovable-uploads/34786a71-30be-465f-b2eb-161c8eaa9ff1.png", // Microsoft Dynamics 365 logo
           fallbackLogo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg"
         },
         {
