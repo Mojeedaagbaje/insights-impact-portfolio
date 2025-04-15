@@ -10,6 +10,11 @@ interface HeroSectionProps {
 const HeroSection = ({ onScrollDown }: HeroSectionProps) => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Hero background image */}
+      <div className="absolute inset-0 -z-20 bg-cover bg-center opacity-10"
+           style={{ backgroundImage: "url('/lovable-uploads/97188b60-d353-4d46-b078-4301ce0f9f20.png')" }}>
+      </div>
+      
       {/* Animated background elements */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-20 right-20 w-72 h-72 bg-primary/5 rounded-full animate-float blur-3xl" />

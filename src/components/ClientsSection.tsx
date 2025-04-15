@@ -42,7 +42,7 @@ const ClientsSection = () => {
     },
     {
       name: "Government of Alberta – Ministry of Technology & Innovation",
-      logo: "https://via.placeholder.com/150x60?text=Gov+Alberta",
+      logo: "/lovable-uploads/4c2759e4-7a10-479a-8c5c-43c59021faab.png",
       industry: "Government",
       bgColor: "bg-green-50",
       hoverBgColor: "hover:bg-green-100",
@@ -51,7 +51,7 @@ const ClientsSection = () => {
     },
     {
       name: "Afroshop",
-      logo: "https://via.placeholder.com/150x60?text=Afroshop",
+      logo: "/lovable-uploads/52550a89-18ad-4fd5-839a-4e95a64c1640.png",
       industry: "E-commerce",
       bgColor: "bg-orange-50",
       hoverBgColor: "hover:bg-orange-100",
@@ -60,7 +60,7 @@ const ClientsSection = () => {
     },
     {
       name: "PAGE Financials",
-      logo: "https://via.placeholder.com/150x60?text=PAGE+Financials",
+      logo: "/lovable-uploads/e1db35cd-435e-4278-93fa-94b765973147.png",
       industry: "Financial Services",
       bgColor: "bg-red-50",
       hoverBgColor: "hover:bg-red-100",
@@ -69,7 +69,7 @@ const ClientsSection = () => {
     },
     {
       name: "Eden Life Hospital",
-      logo: "https://via.placeholder.com/150x60?text=Eden+Life",
+      logo: "/lovable-uploads/8f9db1f7-e9fb-4951-b571-d3ebca7a8baa.png",
       industry: "Healthcare",
       bgColor: "bg-teal-50",
       hoverBgColor: "hover:bg-teal-100",

@@ -17,32 +17,32 @@ const TechnologiesSection = () => {
       technologies: [
         {
           name: "Power BI",
-          logo: "/lovable-uploads/powerbi-logo.png",
+          logo: "/lovable-uploads/15180302-963b-4b9f-b24a-7febd6f013a5.png",
           fallbackLogo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg"
         },
         {
           name: "Tableau",
-          logo: "/lovable-uploads/tableau-logo.png",
+          logo: "/lovable-uploads/72f637aa-9388-4ede-ae01-02f1c6805510.png",
           fallbackLogo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg"
         },
         {
           name: "SAS",
-          logo: "/lovable-uploads/sas-logo.png",
+          logo: "/lovable-uploads/3c657fda-efaf-4e9c-acd7-f47381ad5082.png",
           fallbackLogo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
         },
         {
           name: "Microsoft Fabric",
-          logo: "/lovable-uploads/fabric-logo.png",
+          logo: "/lovable-uploads/668e4b14-92c5-4041-9d87-acba248b7be7.png",
           fallbackLogo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"
         },
         {
           name: "Python (Pandas, NumPy)",
-          logo: "/lovable-uploads/python-logo.png",
+          logo: "/lovable-uploads/298015d9-8bf9-4b79-bfea-0b1a7ff4b6bc.png",
           fallbackLogo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
         },
         {
-          name: "R Programming",
-          logo: "/lovable-uploads/r-logo.png",
+          name: "Incorta",
+          logo: "/lovable-uploads/5ea414e7-5c03-470d-84e2-db47ed76f404.png",
           fallbackLogo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg"
         }
       ],
@@ -59,32 +59,32 @@ const TechnologiesSection = () => {
       technologies: [
         {
           name: "Microsoft Azure",
-          logo: "/lovable-uploads/azure-logo.png",
+          logo: "/lovable-uploads/48721c56-3b15-4d9f-a398-ecfe1a9ffb2e.png",
           fallbackLogo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"
         },
         {
           name: "Amazon Web Services (AWS)",
-          logo: "/lovable-uploads/aws-logo.png",
+          logo: "/lovable-uploads/5f4e3777-800d-4d04-a601-bde421c8d485.png",
           fallbackLogo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg"
         },
         {
           name: "Google Cloud Platform",
-          logo: "/lovable-uploads/gcp-logo.png",
+          logo: "/lovable-uploads/a8e62966-cc95-4ace-80d5-e538052c7ade.png",
           fallbackLogo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
         },
         {
           name: "IBM Cloud",
-          logo: "/lovable-uploads/ibm-logo.png",
+          logo: "/lovable-uploads/69c7fc0c-4da6-4299-abb9-c6105508d274.png",
           fallbackLogo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/debian/debian-original.svg"
         },
         {
-          name: "Azure DevOps",
-          logo: "/lovable-uploads/azure-devops-logo.png",
+          name: "Digital Ocean",
+          logo: "/lovable-uploads/2ef1888e-dd5b-4503-a762-76efa6af89c7.png",
           fallbackLogo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg"
         },
         {
-          name: "AWS CloudFormation",
-          logo: "/lovable-uploads/cloudformation-logo.png",
+          name: "Alibaba Cloud",
+          logo: "/lovable-uploads/378300a9-1d44-48cb-b8b2-47bcb42f6e75.png",
           fallbackLogo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg"
         }
       ],
@@ -101,32 +101,32 @@ const TechnologiesSection = () => {
       technologies: [
         {
           name: "Jira",
-          logo: "/lovable-uploads/jira-logo.png",
+          logo: "/lovable-uploads/6f25ae04-55d9-443e-91b9-74a90011951c.png",
           fallbackLogo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg"
         },
         {
           name: "Azure DevOps",
-          logo: "/lovable-uploads/azure-devops-logo.png",
+          logo: "/lovable-uploads/5d1b1597-d4c1-4576-af41-bf4727bf332b.png",
           fallbackLogo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg"
         },
         {
           name: "Figma",
-          logo: "/lovable-uploads/figma-logo.png",
+          logo: "/lovable-uploads/7a3321d1-8809-4877-82db-cb67316553b7.png",
           fallbackLogo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
         },
         {
           name: "Balsamiq",
-          logo: "/lovable-uploads/balsamiq-logo.png",
+          logo: "/lovable-uploads/ddeef47f-63d3-4211-87b8-45dc883ac436.png",
           fallbackLogo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg"
         },
         {
           name: "Microsoft Visio",
-          logo: "/lovable-uploads/visio-logo.png",
+          logo: "/lovable-uploads/5f726c42-1423-47e7-9498-511fbd29f8c4.png",
           fallbackLogo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg"
         },
         {
           name: "Miro",
-          logo: "/lovable-uploads/miro-logo.png",
+          logo: "/lovable-uploads/2225dbac-461e-4638-9641-7bef49358aee.png",
           fallbackLogo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg"
         }
       ],
@@ -143,42 +143,42 @@ const TechnologiesSection = () => {
       technologies: [
         {
           name: "Microsoft Dynamics 365",
-          logo: "/lovable-uploads/dynamics-logo.png",
+          logo: "/lovable-uploads/c07b7e56-6ede-4c32-bd8a-df38a19463aa.png",
           fallbackLogo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg"
         },
         {
           name: "SAP",
-          logo: "/lovable-uploads/sap-logo.png",
+          logo: "/lovable-uploads/5f3e899e-ca81-4a32-9a45-01299018aeaa.png",
           fallbackLogo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
         },
         {
           name: "Salesforce",
-          logo: "/lovable-uploads/salesforce-logo.png",
+          logo: "/lovable-uploads/e8119862-32dc-481a-a649-43d96b160646.png",
           fallbackLogo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/salesforce/salesforce-original.svg"
         },
         {
           name: "Oracle Siebel CRM",
-          logo: "/lovable-uploads/oracle-logo.png",
+          logo: "/lovable-uploads/6312e432-2364-45f0-ad03-1cca86d6a599.png",
           fallbackLogo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg"
         },
         {
           name: "ServiceNow",
-          logo: "/lovable-uploads/servicenow-logo.png",
+          logo: "/lovable-uploads/010cc9cc-08fa-4be3-a3a4-30c31e1a7bea.png",
           fallbackLogo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gradle/gradle-plain.svg"
         },
         {
           name: "Workday",
-          logo: "/lovable-uploads/workday-logo.png",
+          logo: "/lovable-uploads/487f3be2-1b40-4dd7-be5a-02bf217cc22c.png",
           fallbackLogo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/composer/composer-original.svg"
         },
         {
           name: "Cerner Millennium",
-          logo: "/lovable-uploads/cerner-logo.png",
+          logo: "/lovable-uploads/a439430e-3425-4fc0-84fe-7e7f6dc3fe60.png",
           fallbackLogo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
         },
         {
           name: "Meditech",
-          logo: "/lovable-uploads/meditech-logo.png",
+          logo: "/lovable-uploads/ef09cc59-a9d2-4bfa-a994-a28b5016add6.png",
           fallbackLogo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
         }
       ],

@@ -20,20 +20,30 @@ const EducationSection = () => {
     {
       degree: "Bachelor of Science (B.Sc.)",
       institution: "University of Ilorin",
+      logo: "/lovable-uploads/5181a364-9490-48cb-9734-7b829f7f7839.png",
       period: "2006 - 2010",
       description: "Focus on business and technology applications."
     },
     {
       degree: "Master of Science (M.Sc.)",
       institution: "Obafemi Awolowo University",
+      logo: "/lovable-uploads/e34d9a1d-18da-44cc-9c8c-2e4f490ef741.png",
       period: "2015 - 2017",
       description: "Specialized in strategic business management and technology implementation."
     },
     {
       degree: "Postgraduate Diploma in Data Science and AI",
       institution: "University of Texas, Austin",
+      logo: "/lovable-uploads/1367b2e1-72b3-4319-b682-8827012362b4.png",
       period: "In View",
       description: "Advanced studies in artificial intelligence, machine learning, and data analytics."
+    },
+    {
+      degree: "Project Management in Global Health",
+      institution: "University of Washington",
+      logo: "/lovable-uploads/6e8b1f2d-3a50-48b1-85dd-82523bebeafa.png",
+      period: "2025",
+      description: "Specialized training in managing healthcare projects with global impact."
     }
   ];
 
@@ -43,11 +53,11 @@ const EducationSection = () => {
       title: "Business Analysis & Agile",
       icon: <BookOpen className="h-5 w-5" />,
       certifications: [
-        { name: "Certified Business Analysis Professional (CBAP)", issuer: "IIBA" },
-        { name: "Project Management Professional (PMP)", issuer: "PMI" },
-        { name: "Certified SAFe 6 Agilist", issuer: "Scaled Agile" },
-        { name: "Advanced Certified Scrum Master (A-CSM)", issuer: "Scrum Alliance" },
-        { name: "Certified Scrum Product Owner (CSPO)", issuer: "Scrum Alliance" }
+        { name: "Certified Business Analysis Professional (CBAP)", issuer: "IIBA", logo: "/lovable-uploads/dac36a35-0068-4f97-b05d-8b1cecdc1b15.png" },
+        { name: "Project Management Professional (PMP)", issuer: "PMI", logo: "/lovable-uploads/4926ae77-9fd4-4013-b124-e7e1ab528dc4.png" },
+        { name: "Certified SAFe 6 Agilist", issuer: "Scaled Agile", logo: "/lovable-uploads/9253c9e0-584a-43fc-aecf-c6b96f01a207.png" },
+        { name: "Advanced Certified Scrum Master (A-CSM)", issuer: "Scrum Alliance", logo: "/lovable-uploads/8dff2459-1cff-48c1-a437-bcee85db6e7c.png" },
+        { name: "Certified Scrum Product Owner (CSPO)", issuer: "Scrum Alliance", logo: "/lovable-uploads/8dff2459-1cff-48c1-a437-bcee85db6e7c.png" }
       ]
     },
     {
@@ -55,9 +65,9 @@ const EducationSection = () => {
       title: "Product & AI Certifications",
       icon: <BookOpen className="h-5 w-5" />,
       certifications: [
-        { name: "AI-First Product Leader", issuer: "PMI" },
-        { name: "Implementing Responsible AI", issuer: "LinkedIn" },
-        { name: "Generative AI Fundamentals", issuer: "NVIDIA" }
+        { name: "AI-First Product Leader", issuer: "PMI", logo: "/lovable-uploads/4926ae77-9fd4-4013-b124-e7e1ab528dc4.png" },
+        { name: "Implementing Responsible AI", issuer: "LinkedIn", logo: "/lovable-uploads/38bb4361-84dd-4d2c-8f40-f29717979574.png" },
+        { name: "Generative AI Fundamentals", issuer: "NVIDIA", logo: "/lovable-uploads/b4c369e2-3302-4b69-bdcc-debb42d72986.png" }
       ]
     },
     {
@@ -65,9 +75,9 @@ const EducationSection = () => {
       title: "Cloud & FinOps",
       icon: <BookOpen className="h-5 w-5" />,
       certifications: [
-        { name: "AWS Technical Essentials", issuer: "AWS" },
-        { name: "Microsoft Certified: Azure Fundamentals", issuer: "Microsoft" },
-        { name: "FinOps Masterclass (Cost Optimization)", issuer: "Udemy" }
+        { name: "AWS Technical Essentials", issuer: "AWS", logo: "/lovable-uploads/5f4e3777-800d-4d04-a601-bde421c8d485.png" },
+        { name: "Microsoft Certified: Azure Fundamentals", issuer: "Microsoft", logo: "/lovable-uploads/48721c56-3b15-4d9f-a398-ecfe1a9ffb2e.png" },
+        { name: "FinOps Masterclass (Cost Optimization)", issuer: "Udemy", logo: "/lovable-uploads/77deb6bc-9c40-4d78-876d-343e484b6be9.png" }
       ]
     },
     {
@@ -75,22 +85,29 @@ const EducationSection = () => {
       title: "IT Service & Automation",
       icon: <BookOpen className="h-5 w-5" />,
       certifications: [
-        { name: "ITIL V4 Foundation Certification", issuer: "Axelos" },
-        { name: "Lean Six Sigma Yellow Belt", issuer: "6sigmastudy" },
-        { name: "Certified Cybersecurity", issuer: "ISC2" }
+        { name: "ITIL V4 Foundation Certification", issuer: "Axelos", logo: "/lovable-uploads/5ab44297-d953-44ee-b8a0-921f4843edef.png" },
+        { name: "Lean Six Sigma Yellow Belt", issuer: "6sigmastudy", logo: "/lovable-uploads/b4c369e2-3302-4b69-bdcc-debb42d72986.png" },
+        { name: "Certified Cybersecurity", issuer: "ISC2", logo: "/lovable-uploads/1d94d0d8-b717-4200-a636-d155aa27c44c.png" }
       ]
     }
   ];
 
   const memberships = [
-    { name: "IIBA", logo: "https://via.placeholder.com/80x80?text=IIBA" },
-    { name: "TBM Council", logo: "https://via.placeholder.com/80x80?text=TBM" }, 
-    { name: "FinOps Foundation", logo: "https://via.placeholder.com/80x80?text=FinOps" }, 
-    { name: "PMI", logo: "https://via.placeholder.com/80x80?text=PMI" }, 
-    { name: "ISC2", logo: "https://via.placeholder.com/80x80?text=ISC2" },
-    { name: "Scrum Alliance", logo: "https://via.placeholder.com/80x80?text=Scrum" }, 
-    { name: "SAFe", logo: "https://via.placeholder.com/80x80?text=SAFe" }
+    { name: "IIBA", logo: "/lovable-uploads/dac36a35-0068-4f97-b05d-8b1cecdc1b15.png" },
+    { name: "TBM Council", logo: "/lovable-uploads/71f72bed-56b0-48a5-8166-ea9fdc7cbae5.png" }, 
+    { name: "FinOps Foundation", logo: "/lovable-uploads/b4c369e2-3302-4b69-bdcc-debb42d72986.png" }, 
+    { name: "PMI", logo: "/lovable-uploads/4926ae77-9fd4-4013-b124-e7e1ab528dc4.png" }, 
+    { name: "ISC2", logo: "/lovable-uploads/1d94d0d8-b717-4200-a636-d155aa27c44c.png" },
+    { name: "Scrum Alliance", logo: "/lovable-uploads/8dff2459-1cff-48c1-a437-bcee85db6e7c.png" }, 
+    { name: "SAFe", logo: "/lovable-uploads/9253c9e0-584a-43fc-aecf-c6b96f01a207.png" }
   ];
+
+  // Function to handle image loading errors
+  const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+    const imgElement = e.currentTarget;
+    imgElement.onerror = null; // Prevent infinite loops
+    imgElement.src = "https://via.placeholder.com/80x80?text=" + encodeURIComponent(imgElement.alt);
+  };
 
   return (
     <section id="education" className="bg-indigo-50 section-animate">
@@ -106,10 +123,18 @@ const EducationSection = () => {
             <h3 className="text-2xl font-semibold">Education</h3>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {education.map((item, index) => (
               <Card key={index} className="p-6 glassmorphism card-hover bg-white/80">
                 <div className="space-y-3">
+                  <div className="flex justify-center mb-4">
+                    <img 
+                      src={item.logo} 
+                      alt={`${item.institution} logo`} 
+                      className="h-12 object-contain" 
+                      onError={handleImageError}
+                    />
+                  </div>
                   <div className="flex justify-between items-start">
                     <h4 className="text-xl font-semibold">{item.degree}</h4>
                     <span className="px-2 py-1 bg-indigo-100 text-indigo-600 text-xs rounded-full flex items-center gap-1">
@@ -157,8 +182,16 @@ const EducationSection = () => {
                         key={index} 
                         className="flex flex-col p-4 bg-white/50 rounded-lg shadow-sm card-hover"
                       >
-                        <h5 className="font-medium text-primary">{cert.name}</h5>
-                        <span className="text-sm text-indigo-600 mt-2">{cert.issuer}</span>
+                        <div className="flex justify-center mb-3">
+                          <img 
+                            src={cert.logo} 
+                            alt={`${cert.issuer} logo`} 
+                            className="h-10 object-contain" 
+                            onError={handleImageError}
+                          />
+                        </div>
+                        <h5 className="font-medium text-primary text-center">{cert.name}</h5>
+                        <span className="text-sm text-indigo-600 mt-2 text-center">{cert.issuer}</span>
                       </div>
                     ))}
                   </div>
@@ -180,7 +213,12 @@ const EducationSection = () => {
               <div className="grid grid-cols-2 gap-4">
                 {memberships.map((membership, index) => (
                   <div key={index} className="flex flex-col items-center gap-2 bg-white rounded-lg p-4 text-center card-hover">
-                    <img src={membership.logo} alt={membership.name} className="w-16 h-16 object-contain mb-2" />
+                    <img 
+                      src={membership.logo} 
+                      alt={membership.name} 
+                      className="w-16 h-16 object-contain mb-2" 
+                      onError={handleImageError}
+                    />
                     <Badge className="bg-indigo-50 text-indigo-600 hover:bg-indigo-100 py-1 px-2 text-xs text-center whitespace-nowrap">
                       {membership.name}
                     </Badge>
@@ -199,7 +237,12 @@ const EducationSection = () => {
                   {memberships.map((membership, index) => (
                     <CarouselItem key={index} className="basis-1/3 md:basis-1/5 lg:basis-1/7">
                       <div className="flex flex-col items-center gap-2 bg-white rounded-lg p-4 text-center card-hover">
-                        <img src={membership.logo} alt={membership.name} className="w-20 h-20 object-contain mb-2" />
+                        <img 
+                          src={membership.logo} 
+                          alt={membership.name} 
+                          className="w-20 h-20 object-contain mb-2" 
+                          onError={handleImageError}
+                        />
                         <Badge className="bg-indigo-50 text-indigo-600 hover:bg-indigo-100 py-2 px-4 text-center">
                           {membership.name}
                         </Badge>
