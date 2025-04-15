@@ -24,7 +24,7 @@ const ClientsSection = () => {
     },
     {
       name: "Prima Matrix Ltd.",
-      logo: "/lovable-uploads/eba00fd7-6095-497f-ae71-8941dcb07429.png",
+      logo: "/lovable-uploads/136e665b-cdc6-47be-b74c-e5babd9d9a6a.png",
       industry: "Consulting",
       bgColor: "bg-indigo-50",
       hoverBgColor: "hover:bg-indigo-100",
@@ -42,7 +42,7 @@ const ClientsSection = () => {
     },
     {
       name: "Government of Alberta – Ministry of Technology & Innovation",
-      logo: "/lovable-uploads/4c2759e4-7a10-479a-8c5c-43c59021faab.png",
+      logo: "/lovable-uploads/58ce8b6a-1e34-4fa7-b65f-4828142a8113.png",
       industry: "Government",
       bgColor: "bg-green-50",
       hoverBgColor: "hover:bg-green-100",
@@ -51,7 +51,7 @@ const ClientsSection = () => {
     },
     {
       name: "Afroshop",
-      logo: "/lovable-uploads/52550a89-18ad-4fd5-839a-4e95a64c1640.png",
+      logo: "/lovable-uploads/a5645492-1495-448d-9d97-8bdb9bfd1faf.png",
       industry: "E-commerce",
       bgColor: "bg-orange-50",
       hoverBgColor: "hover:bg-orange-100",
@@ -59,22 +59,31 @@ const ClientsSection = () => {
       hoverBorderColor: "hover:border-orange-300"
     },
     {
-      name: "PAGE Financials",
-      logo: "/lovable-uploads/e1db35cd-435e-4278-93fa-94b765973147.png",
-      industry: "Financial Services",
-      bgColor: "bg-red-50",
-      hoverBgColor: "hover:bg-red-100",
-      borderColor: "border-red-200",
-      hoverBorderColor: "hover:border-red-300"
+      name: "Ekiti State Government",
+      logo: "/lovable-uploads/eb3010ba-887d-48a6-8810-585c36741d61.png",
+      industry: "Government",
+      bgColor: "bg-green-50",
+      hoverBgColor: "hover:bg-green-100",
+      borderColor: "border-green-200",
+      hoverBorderColor: "hover:border-green-300"
     },
     {
       name: "Eden Life Hospital",
-      logo: "/lovable-uploads/8f9db1f7-e9fb-4951-b571-d3ebca7a8baa.png",
+      logo: "/lovable-uploads/122e4512-c2b8-4ea2-86ff-a1cc3b506013.png",
       industry: "Healthcare",
       bgColor: "bg-teal-50",
       hoverBgColor: "hover:bg-teal-100",
       borderColor: "border-teal-200",
       hoverBorderColor: "hover:border-teal-300"
+    },
+    {
+      name: "SpidLit Logistics",
+      logo: "/lovable-uploads/58ce8b6a-1e34-4fa7-b65f-4828142a8113.png",
+      industry: "Logistics",
+      bgColor: "bg-emerald-50",
+      hoverBgColor: "hover:bg-emerald-100",
+      borderColor: "border-emerald-200",
+      hoverBorderColor: "hover:border-emerald-300"
     }
   ];
 
