@@ -7,18 +7,22 @@ interface HeroSectionProps {
   onScrollDown: () => void;
 }
 
+// You can swap to other dynamic images as needed
+const HERO_BG_IMG =
+  "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=1500&q=80";
+
 const HeroSection = ({ onScrollDown }: HeroSectionProps) => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Hero tech-related background image */}
-      <div
-        className="absolute inset-0 -z-20 bg-cover bg-center opacity-15"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=1200&q=80')"
-        }}
-      ></div>
-
+    <section
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      style={{
+        backgroundImage: `url('${HERO_BG_IMG}')`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat"
+      }}
+    >
+      <div className="absolute inset-0 -z-10 bg-black/50" /> {/* Dark overlay for contrast */}
       {/* Animated background elements */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-20 right-20 w-72 h-72 bg-primary/5 rounded-full animate-float blur-3xl" />
@@ -33,26 +37,17 @@ const HeroSection = ({ onScrollDown }: HeroSectionProps) => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-10">
-        <div className="text-center space-y-10">
+        <div className="text-center space-y-10 text-white">
           <div className="space-y-6 animate-slide-up">
-            <p className="text-2xl sm:text-3xl font-medium text-blue-600">
+            <p className="text-2xl sm:text-3xl font-medium text-blue-300">
               Hi, I am Mojeed Agbaje
             </p>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight text-primary relative">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight text-white relative">
               <span className="block">
-                I Transform <span className="text-blue-600">Insights</span> into <span className="text-blue-600">Impact</span>
+                I Transform <span className="text-blue-400">Insights</span> into <span className="text-blue-400">Impact</span>
               </span>
-              {/* Decorative tech image inside Hero */}
-              <img
-                src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=600&q=80"
-                alt="Tech code monitor"
-                className="mx-auto my-6 rounded-xl shadow-lg w-full max-w-lg h-36 object-cover object-center opacity-70"
-                style={{
-                  border: "2px solid #3b82f6"
-                }}
-              />
             </h1>
-            <p className="max-w-2xl mx-auto text-lg sm:text-xl text-muted-foreground">
+            <p className="max-w-2xl mx-auto text-lg sm:text-xl text-blue-100">
               Empowering businesses with tailored strategies, innovative solutions, and sustainable growth.
             </p>
           </div>
