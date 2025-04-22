@@ -14,7 +14,7 @@ import { useIsMobile } from "@/hooks/use-mobile";
 
 const EducationSection = () => {
   const isMobile = useIsMobile();
-  
+
   const education = [
     {
       degree: "Bachelor of Science (B.Sc.)",
