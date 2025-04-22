@@ -178,6 +178,22 @@ const ContactSection = () => {
                   />
                 </div>
                 
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-gray-700">
+                    Are you interested in receiving portfolio samples?
+                  </label>
+                  <div className="flex items-center gap-4">
+                    <label className="flex items-center gap-2 cursor-pointer">
+                      <input type="radio" name="portfolio" className="h-4 w-4 text-indigo-600" />
+                      <span>Yes</span>
+                    </label>
+                    <label className="flex items-center gap-2 cursor-pointer">
+                      <input type="radio" name="portfolio" className="h-4 w-4 text-indigo-600" />
+                      <span>No</span>
+                    </label>
+                  </div>
+                </div>
+                
                 <Button type="submit" className="bg-indigo-700 hover:bg-indigo-800 text-white flex items-center gap-2 transition-all duration-200 hover:shadow-lg">
                   <Send className="h-4 w-4" />
                   Send Message

@@ -7,7 +7,7 @@ import { useIsMobile } from "@/hooks/use-mobile";
 
 const TechnologiesSection = () => {
   const isMobile = useIsMobile();
-
+  
   const categories = [
     {
       id: "data-analysis",
@@ -97,8 +97,8 @@ const TechnologiesSection = () => {
       <Tabs defaultValue="data-analysis" className="w-full">
         <TabsList className={`flex flex-wrap ${isMobile ? 'gap-2 bg-transparent justify-center mb-10' : 'grid grid-cols-4 mb-8 bg-transparent'}`}>
           {categories.map((category) => (
-            <TabsTrigger
-              key={category.id}
+            <TabsTrigger 
+              key={category.id} 
               value={category.id}
               className={`data-[state=active]:shadow-soft data-[state=active]:${category.bgColor} data-[state=active]:${category.color} ${isMobile ? 'flex-1 min-w-[45%] text-xs py-1 px-1' : ''}`}
             >
@@ -109,7 +109,7 @@ const TechnologiesSection = () => {
             </TabsTrigger>
           ))}
         </TabsList>
-
+        
         {categories.map((category) => (
           <TabsContent key={category.id} value={category.id} className="mt-4">
             <Card className={`glassmorphism p-6 ${category.bgColor}`}>
@@ -118,8 +118,8 @@ const TechnologiesSection = () => {
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 {category.technologies.map((tech, index) => (
-                  <div
-                    key={index}
+                  <div 
+                    key={index} 
                     className={`flex items-center p-4 bg-white/50 rounded-lg shadow-sm card-hover transition-all duration-300 ${category.hoverBgColor}`}
                   >
                     <span className={`${category.color} text-sm`}>{tech.name}</span>
